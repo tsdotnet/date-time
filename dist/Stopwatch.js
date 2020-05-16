@@ -8,9 +8,9 @@ const tslib_1 = require("tslib");
 const TimeSpan_1 = tslib_1.__importDefault(require("./TimeSpan"));
 class Stopwatch {
     constructor() {
+        this._startTimeStamp = NaN;
         this._elapsed = 0;
         this._isRunning = false;
-        this._startTimeStamp = NaN;
     }
     get elapsed() {
         return new TimeSpan_1.default(this.elapsedMilliseconds);

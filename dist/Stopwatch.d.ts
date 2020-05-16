@@ -2,13 +2,13 @@
  * @author electricessence / https://github.com/electricessence/
  * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
  */
-import TimeSpan from './TimeSpan';
 import Timer from './Timer';
+import TimeSpan from './TimeSpan';
 export default class Stopwatch implements Timer {
-    private _elapsed;
-    private _isRunning;
     private _startTimeStamp;
+    private _elapsed;
     get elapsed(): TimeSpan;
+    private _isRunning;
     get isRunning(): boolean;
     get currentLapMilliseconds(): number;
     get currentLap(): TimeSpan;

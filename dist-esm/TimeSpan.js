@@ -5,9 +5,9 @@
  */
 import type from '@tsdotnet/compare/dist/type';
 import Lazy from '@tsdotnet/lazy';
-import TimeUnit from './TimeUnit';
 import ClockTime from './ClockTime';
 import TimeQuantity from './TimeQuantity';
+import TimeUnit from './TimeUnit';
 /**
  * TimeSpan expands on TimeQuantity to provide an class that is similar to .NET's TimeSpan including many useful static methods.
  */

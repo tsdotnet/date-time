@@ -9,9 +9,9 @@ exports.TimeSpan = void 0;
 const tslib_1 = require("tslib");
 const type_1 = tslib_1.__importDefault(require("@tsdotnet/compare/dist/type"));
 const lazy_1 = tslib_1.__importDefault(require("@tsdotnet/lazy"));
-const TimeUnit_1 = tslib_1.__importDefault(require("./TimeUnit"));
 const ClockTime_1 = tslib_1.__importDefault(require("./ClockTime"));
 const TimeQuantity_1 = tslib_1.__importDefault(require("./TimeQuantity"));
+const TimeUnit_1 = tslib_1.__importDefault(require("./TimeUnit"));
 /**
  * TimeSpan expands on TimeQuantity to provide an class that is similar to .NET's TimeSpan including many useful static methods.
  */

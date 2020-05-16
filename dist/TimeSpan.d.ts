@@ -3,10 +3,10 @@
  * Originally based upon .NET source but with many additions and improvements.
  * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
  */
-import TimeUnit from './TimeUnit';
 import ClockTime from './ClockTime';
-import TimeQuantity from './TimeQuantity';
 import TimeMeasurement from './TimeMeasurement';
+import TimeQuantity from './TimeQuantity';
+import TimeUnit from './TimeUnit';
 /**
  * TimeSpan expands on TimeQuantity to provide an class that is similar to .NET's TimeSpan including many useful static methods.
  */

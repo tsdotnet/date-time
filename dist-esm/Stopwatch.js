@@ -5,9 +5,9 @@
 import TimeSpan from './TimeSpan';
 export default class Stopwatch {
     constructor() {
+        this._startTimeStamp = NaN;
         this._elapsed = 0;
         this._isRunning = false;
-        this._startTimeStamp = NaN;
     }
     get elapsed() {
         return new TimeSpan(this.elapsedMilliseconds);
