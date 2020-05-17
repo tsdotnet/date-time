@@ -1,8 +1,11 @@
 "use strict";
 /*!
  * @author electricessence / https://github.com/electricessence/
- * Originally based upon .NET source but with many additions and improvements.
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ClockTime = void 0;
@@ -16,8 +19,8 @@ class ClockTime extends TimeQuantity_1.default {
         const ms = Math.abs(this.getTotalMilliseconds());
         let msi = Math.floor(ms);
         this.tick = (ms - msi) * 10000 /* millisecond */;
-        this.days = (msi / 86400000 /* day */) | 0;
-        msi -= this.days * 86400000 /* day */;
+        this.day = (msi / 86400000 /* day */) | 0;
+        msi -= this.day * 86400000 /* day */;
         this.hour = (msi / 3600000 /* hour */) | 0;
         msi -= this.hour * 3600000 /* hour */;
         this.minute = (msi / 60000 /* minute */) | 0;
@@ -45,8 +48,8 @@ class ClockTime extends TimeQuantity_1.default {
         /* INSERT CUSTOM FORMATTING CODE HERE */
         const _ = this;
         const a = [];
-        if (_.days)
-            a.push(pluralize(_.days, 'day'));
+        if (_.day)
+            a.push(pluralize(_.day, 'day'));
         if (_.hour)
             a.push(pluralize(_.hour, 'hour'));
         if (_.minute)

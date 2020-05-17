@@ -1,14 +1,18 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
  * Originally based upon .NET source but with many additions and improvements.
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 import TimeQuantity from './TimeQuantity';
-declare namespace TimeUnit {
+export declare namespace TimeUnit {
     /**
      * A distinct unit of time measurement.
      */
-    enum Value {
+    enum UnitType {
         Ticks = 0,
         Milliseconds = 1,
         Seconds = 2,
@@ -19,29 +23,29 @@ declare namespace TimeUnit {
     /**
      * Converts any TimeUnit value to it's respective millisecond quantity.
      * @param {number} value
-     * @param {Value} units
+     * @param {UnitType} units
      * @return {number} Number of milliseconds representing the specified units.
      */
-    function toMilliseconds(value: number, units: Value): number;
+    function toMilliseconds(value: number, units: UnitType): number;
     /**
      * Converts milliseconds to the specified TimeUnit quantity.
      * @param {number} ms
-     * @param {Value} units
+     * @param {UnitType} units
      * @return {number}
      */
-    function fromMilliseconds(ms: number, units: Value): number;
+    function fromMilliseconds(ms: number, units: UnitType): number;
     /**
      * Converts a TimeQuantity to the the TimeUnit requested..
      * @param {TimeQuantity} quantity
-     * @param {Value} toUnits
+     * @param {UnitType} toUnits
      * @return {number}
      */
-    function from(quantity: TimeQuantity, toUnits: Value): number;
+    function from(quantity: TimeQuantity, toUnits: UnitType): number;
     /**
      * Asserts if the time unit value is valid.
-     * @param {Value} unit
+     * @param {UnitType} unit
      * @return {true}
      */
-    function assertValid(unit: Value): true | never;
+    function assertValid(unit: UnitType): true | never;
 }
 export default TimeUnit;

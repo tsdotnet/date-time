@@ -1,7 +1,11 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
  * Based on .NET DateTime's interface.
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 
 import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
@@ -192,7 +196,7 @@ export default class DateTime
 			f: Date = first instanceof DateTime ? first._value : first,
 			l: Date = last instanceof DateTime ? last._value : last;
 
-		return new TimeSpan(l.getTime() - f.getTime());
+		return TimeSpan.fromMilliseconds(l.getTime() - f.getTime());
 	}
 
 	/**

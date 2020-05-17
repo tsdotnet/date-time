@@ -1,20 +1,23 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
- * Originally based upon .NET source but with many additions and improvements.
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 
 import ClockTimeValue from './ClockTimeValue';
 import * as howMany from './howMany';
 import TimeQuantity from './TimeQuantity';
-
+import msPer = howMany.milliseconds.per;
 
 export class ClockTime
 	extends TimeQuantity
 	implements Required<ClockTimeValue>
 {
 
-	readonly days: number;
+	readonly day: number;
 	readonly hour: number;
 	readonly minute: number;
 	readonly second: number;
@@ -41,17 +44,18 @@ export class ClockTime
 
 		this.tick = (ms - msi)*howMany.ticks.per.millisecond;
 
-		this.days = (msi/howMany.milliseconds.per.day) | 0;
-		msi -= this.days*howMany.milliseconds.per.day;
 
-		this.hour = (msi/howMany.milliseconds.per.hour) | 0;
-		msi -= this.hour*howMany.milliseconds.per.hour;
+		this.day = (msi/msPer.day) | 0;
+		msi -= this.day*howMany.milliseconds.per.day;
 
-		this.minute = (msi/howMany.milliseconds.per.minute) | 0;
-		msi -= this.minute*howMany.milliseconds.per.minute;
+		this.hour = (msi/msPer.hour) | 0;
+		msi -= this.hour*msPer.hour;
 
-		this.second = (msi/howMany.milliseconds.per.second) | 0;
-		msi -= this.second*howMany.milliseconds.per.second;
+		this.minute = (msi/msPer.minute) | 0;
+		msi -= this.minute*msPer.minute;
+
+		this.second = (msi/msPer.second) | 0;
+		msi -= this.second*msPer.second;
 
 		this.millisecond = msi;
 
@@ -93,8 +97,8 @@ export class ClockTime
 		const _ = this;
 		const a: string[] = [];
 
-		if(_.days)
-			a.push(pluralize(_.days, 'day'));
+		if(_.day)
+			a.push(pluralize(_.day, 'day'));
 
 		if(_.hour)
 			a.push(pluralize(_.hour, 'hour'));

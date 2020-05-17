@@ -1,6 +1,10 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 
 import TimeQuantity from './TimeQuantity';
@@ -12,7 +16,7 @@ import TimeUnit from './TimeUnit';
 export default class TimeUnitValue
 	extends TimeQuantity
 {
-	constructor (value: number | TimeQuantity, private _units: TimeUnit.Value)
+	constructor (value: number | TimeQuantity, private _units: TimeUnit.UnitType)
 	{
 		super(typeof value=='number'
 			? value
@@ -32,14 +36,14 @@ export default class TimeUnitValue
 	}
 
 	// To avoid confusion, the unit type can only be set once at construction.
-	get units (): TimeUnit.Value
+	get units (): TimeUnit.UnitType
 	{
 		return this._units;
 	}
 
 	static from (
 		value: number | TimeQuantity,
-		units: TimeUnit.Value = TimeUnit.Value.Milliseconds): TimeUnitValue
+		units: TimeUnit.UnitType = TimeUnit.UnitType.Milliseconds): TimeUnitValue
 	{
 		return new TimeUnitValue(value, units);
 	}
@@ -49,14 +53,14 @@ export default class TimeUnitValue
 		return TimeUnit.toMilliseconds(this._quantity, this._units);
 	}
 
-	to (units: TimeUnit.Value = this.units): TimeUnitValue
+	to (units: TimeUnit.UnitType = this.units): TimeUnitValue
 	{
 		return TimeUnitValue.from(this, units);
 	}
 
 }
 
-function getUnitQuantityFrom (q: TimeQuantity, units: TimeUnit.Value): number
+function getUnitQuantityFrom (q: TimeQuantity, units: TimeUnit.UnitType): number
 {
 	return TimeUnit.fromMilliseconds(q.getTotalMilliseconds(), units);
 }

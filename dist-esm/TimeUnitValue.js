@@ -1,6 +1,10 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 import TimeQuantity from './TimeQuantity';
 import TimeUnit from './TimeUnit';
@@ -27,7 +31,7 @@ export default class TimeUnitValue extends TimeQuantity {
     get units() {
         return this._units;
     }
-    static from(value, units = TimeUnit.Value.Milliseconds) {
+    static from(value, units = TimeUnit.UnitType.Milliseconds) {
         return new TimeUnitValue(value, units);
     }
     getTotalMilliseconds() {

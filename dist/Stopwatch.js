@@ -1,7 +1,11 @@
 "use strict";
 /*!
  * @author electricessence / https://github.com/electricessence/
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
@@ -13,7 +17,7 @@ class Stopwatch {
         this._isRunning = false;
     }
     get elapsed() {
-        return new TimeSpan_1.default(this.elapsedMilliseconds);
+        return TimeSpan_1.default.fromMilliseconds(this.elapsedMilliseconds);
     }
     get isRunning() {
         return this._isRunning;
@@ -25,7 +29,7 @@ class Stopwatch {
     }
     get currentLap() {
         return this._isRunning
-            ? new TimeSpan_1.default(this.currentLapMilliseconds)
+            ? TimeSpan_1.default.fromMilliseconds(this.currentLapMilliseconds)
             : TimeSpan_1.default.zero;
     }
     get elapsedMilliseconds() {
@@ -47,7 +51,7 @@ class Stopwatch {
     static measure(closure) {
         const start = Date.now();
         closure();
-        return new TimeSpan_1.default(Date.now() - start);
+        return TimeSpan_1.default.fromMilliseconds(Date.now() - start);
     }
     start() {
         const _ = this;
@@ -78,7 +82,7 @@ class Stopwatch {
             const e = t - s;
             _._startTimeStamp = t;
             _._elapsed += e;
-            return new TimeSpan_1.default(e);
+            return TimeSpan_1.default.fromMilliseconds(e);
         }
         else
             return TimeSpan_1.default.zero;

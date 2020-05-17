@@ -1,7 +1,11 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
  * Based on .NET DateTime's interface.
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 import CalendarDate from './CalendarDate';
 import Gregorian from './Calendars/Gregorian';

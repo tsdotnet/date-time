@@ -1,6 +1,10 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 import areEqual from '@tsdotnet/compare/dist/areEqual';
 import compare from '@tsdotnet/compare/dist/compare';
@@ -24,6 +28,21 @@ export default class TimeQuantity {
                 days: ms / 86400000 /* day */
             });
         });
+    }
+    /**
+     * Combine total values by time unit.
+     * @param {Partial<TimeMeasurement>} values
+     * @return {number}
+     */
+    static getTotalMillisecondsFrom(values) {
+        if (!values)
+            return 0;
+        return (values.days || 0) * 86400000 /* day */ +
+            (values.hours || 0) * 3600000 /* hour */ +
+            (values.minutes || 0) * 60000 /* minute */ +
+            (values.seconds || 0) * 1000 /* second */ +
+            (values.milliseconds || 0) +
+            (values.ticks || 0) / 10000 /* millisecond */;
     }
     /**
      * +1, 0, or -1 depending on the time direction.

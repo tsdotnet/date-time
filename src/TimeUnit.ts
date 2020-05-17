@@ -1,7 +1,11 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
  * Originally based upon .NET source but with many additions and improvements.
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 
 import {hours, milliseconds, minutes, seconds, ticks} from './howMany';
@@ -10,12 +14,12 @@ import TimeQuantity from './TimeQuantity';
 
 /* eslint-disable no-fallthrough */
 
-namespace TimeUnit
+export namespace TimeUnit
 {
 	/**
 	 * A distinct unit of time measurement.
 	 */
-	export enum Value
+	export enum UnitType
 	{
 		Ticks,
 		Milliseconds,
@@ -28,27 +32,27 @@ namespace TimeUnit
 	/**
 	 * Converts any TimeUnit value to it's respective millisecond quantity.
 	 * @param {number} value
-	 * @param {Value} units
+	 * @param {UnitType} units
 	 * @return {number} Number of milliseconds representing the specified units.
 	 */
 	export function toMilliseconds (
 		value: number,
-		units: Value): number
+		units: UnitType): number
 	{
 		// noinspection FallThroughInSwitchStatementJS
 		switch(units)
 		{
-			case Value.Days:
+			case UnitType.Days:
 				value *= hours.per.day;
-			case Value.Hours:
+			case UnitType.Hours:
 				value *= minutes.per.hour;
-			case Value.Minutes:
+			case UnitType.Minutes:
 				value *= seconds.per.minute;
-			case Value.Seconds:
+			case UnitType.Seconds:
 				value *= milliseconds.per.second;
-			case Value.Milliseconds:
+			case UnitType.Milliseconds:
 				return value;
-			case Value.Ticks:
+			case UnitType.Ticks:
 				return value/ticks.per.millisecond;
 			default:
 				throw new Error('Invalid TimeUnit.');
@@ -58,26 +62,26 @@ namespace TimeUnit
 	/**
 	 * Converts milliseconds to the specified TimeUnit quantity.
 	 * @param {number} ms
-	 * @param {Value} units
+	 * @param {UnitType} units
 	 * @return {number}
 	 */
 	export function fromMilliseconds (
 		ms: number,
-		units: Value): number
+		units: UnitType): number
 	{
 		switch(units)
 		{
-			case Value.Days:
+			case UnitType.Days:
 				return ms/milliseconds.per.day;
-			case Value.Hours:
+			case UnitType.Hours:
 				return ms/milliseconds.per.hour;
-			case Value.Minutes:
+			case UnitType.Minutes:
 				return ms/milliseconds.per.minute;
-			case Value.Seconds:
+			case UnitType.Seconds:
 				return ms/milliseconds.per.second;
-			case Value.Milliseconds:
+			case UnitType.Milliseconds:
 				return ms;
-			case Value.Ticks:
+			case UnitType.Ticks:
 				return ms*ticks.per.millisecond;
 			default:
 				throw new Error('Invalid TimeUnit.');
@@ -87,10 +91,10 @@ namespace TimeUnit
 	/**
 	 * Converts a TimeQuantity to the the TimeUnit requested..
 	 * @param {TimeQuantity} quantity
-	 * @param {Value} toUnits
+	 * @param {UnitType} toUnits
 	 * @return {number}
 	 */
-	export function from (quantity: TimeQuantity, toUnits: Value): number
+	export function from (quantity: TimeQuantity, toUnits: UnitType): number
 	{
 		return quantity && fromMilliseconds(quantity.getTotalMilliseconds(), toUnits);
 	}
@@ -98,12 +102,12 @@ namespace TimeUnit
 
 	/**
 	 * Asserts if the time unit value is valid.
-	 * @param {Value} unit
+	 * @param {UnitType} unit
 	 * @return {true}
 	 */
-	export function assertValid (unit: Value): true | never
+	export function assertValid (unit: UnitType): true | never
 	{
-		if(isNaN(unit) || unit>Value.Days || unit<Value.Ticks || Math.floor(unit)!==unit)
+		if(isNaN(unit) || unit>UnitType.Days || unit<UnitType.Ticks || Math.floor(unit)!==unit)
 			throw new Error('Invalid TimeUnit.');
 
 		return true;
@@ -111,7 +115,7 @@ namespace TimeUnit
 
 }
 
-Object.freeze(TimeUnit.Value);
+Object.freeze(TimeUnit.UnitType);
 Object.freeze(TimeUnit);
 
 export default TimeUnit;

@@ -1,6 +1,10 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 import TimeSpan from './TimeSpan';
 export default class Stopwatch {
@@ -10,7 +14,7 @@ export default class Stopwatch {
         this._isRunning = false;
     }
     get elapsed() {
-        return new TimeSpan(this.elapsedMilliseconds);
+        return TimeSpan.fromMilliseconds(this.elapsedMilliseconds);
     }
     get isRunning() {
         return this._isRunning;
@@ -22,7 +26,7 @@ export default class Stopwatch {
     }
     get currentLap() {
         return this._isRunning
-            ? new TimeSpan(this.currentLapMilliseconds)
+            ? TimeSpan.fromMilliseconds(this.currentLapMilliseconds)
             : TimeSpan.zero;
     }
     get elapsedMilliseconds() {
@@ -44,7 +48,7 @@ export default class Stopwatch {
     static measure(closure) {
         const start = Date.now();
         closure();
-        return new TimeSpan(Date.now() - start);
+        return TimeSpan.fromMilliseconds(Date.now() - start);
     }
     start() {
         const _ = this;
@@ -75,7 +79,7 @@ export default class Stopwatch {
             const e = t - s;
             _._startTimeStamp = t;
             _._elapsed += e;
-            return new TimeSpan(e);
+            return TimeSpan.fromMilliseconds(e);
         }
         else
             return TimeSpan.zero;

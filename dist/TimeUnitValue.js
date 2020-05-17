@@ -1,7 +1,11 @@
 "use strict";
 /*!
  * @author electricessence / https://github.com/electricessence/
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
@@ -30,7 +34,7 @@ class TimeUnitValue extends TimeQuantity_1.default {
     get units() {
         return this._units;
     }
-    static from(value, units = TimeUnit_1.default.Value.Milliseconds) {
+    static from(value, units = TimeUnit_1.default.UnitType.Milliseconds) {
         return new TimeUnitValue(value, units);
     }
     getTotalMilliseconds() {

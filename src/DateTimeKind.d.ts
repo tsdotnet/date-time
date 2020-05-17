@@ -1,6 +1,11 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
- * Licensing: MIT
+ * @license MIT
+ */
+
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 
 declare const enum DateTimeKind

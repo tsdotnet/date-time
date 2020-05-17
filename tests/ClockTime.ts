@@ -28,7 +28,7 @@ describe('.', () => {
 	});
 
 	it('should match summed values', () => {
-		assert.equal(c2.days, days);
+		assert.equal(c2.day, days);
 		assert.equal(c2.hour, hour);
 		assert.equal(c2.minute, minute);
 		assert.equal(c2.second, second);

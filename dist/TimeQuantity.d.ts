@@ -1,6 +1,10 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 import ResettableLazy from '@tsdotnet/lazy/dist/ResettableLazy';
 import TimeMeasurement from './TimeMeasurement';
@@ -11,6 +15,12 @@ import TimeUnit from './TimeUnit';
 export default class TimeQuantity {
     protected _quantity: number;
     constructor(_quantity?: number);
+    /**
+     * Combine total values by time unit.
+     * @param {Partial<TimeMeasurement>} values
+     * @return {number}
+     */
+    static getTotalMillisecondsFrom(values: Partial<TimeMeasurement>): number;
     /**
      * +1, 0, or -1 depending on the time direction.
      * @returns {number}
@@ -40,5 +50,5 @@ export default class TimeQuantity {
      * @param units
      * @returns {number}
      */
-    getTotal(units: TimeUnit.Value): number;
+    getTotal(units: TimeUnit.UnitType): number;
 }

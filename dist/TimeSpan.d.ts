@@ -1,7 +1,11 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
  * Originally based upon .NET source but with many additions and improvements.
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 import ClockTime from './ClockTime';
 import TimeMeasurement from './TimeMeasurement';
@@ -35,7 +39,7 @@ export declare class TimeSpan extends TimeQuantity implements TimeMeasurement {
      * The total number of ticks that days this amount of time.
      */
     readonly days: number;
-    constructor(value: number, units?: TimeUnit.Value);
+    protected constructor(value: number, units?: TimeUnit.UnitType);
     static get zero(): TimeSpan;
     /**
      * Provides an standard interface for acquiring the total time.
@@ -43,15 +47,31 @@ export declare class TimeSpan extends TimeQuantity implements TimeMeasurement {
      */
     get total(): TimeSpan;
     private _time;
+    /**
+     * The value of this TimeSpan reduced to the clock and calendar.
+     * @return {ClockTime}
+     */
     get time(): ClockTime;
-    static from(value: number, units: TimeUnit.Value): TimeSpan;
+    static from(values: Partial<TimeMeasurement>): TimeSpan;
+    static from(value: number, units: TimeUnit.UnitType): TimeSpan;
     static fromDays(value: number): TimeSpan;
     static fromHours(value: number): TimeSpan;
     static fromMinutes(value: number): TimeSpan;
     static fromSeconds(value: number): TimeSpan;
     static fromMilliseconds(value: number): TimeSpan;
     static fromTicks(value: number): TimeSpan;
-    add(other: TimeQuantity): TimeSpan;
-    addUnit(value: number, units?: TimeUnit.Value): TimeSpan;
+    /**
+     * Sum the value of this TimeSpan with another time quantity.
+     * @param {TimeQuantity | Partial<TimeMeasurement>} other
+     * @return {TimeSpan}
+     */
+    add(other: TimeSpan | TimeQuantity | Partial<TimeMeasurement>): TimeSpan;
+    /**
+     * Sum the value of this TimeSpan with another unit value.
+     * @param {number} value
+     * @param {TimeUnit.UnitType} units
+     * @return {TimeSpan}
+     */
+    addUnit(value: number, units?: TimeUnit.UnitType): TimeSpan;
 }
 export default TimeSpan;

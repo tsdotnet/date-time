@@ -2,7 +2,11 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
  * Based on .NET DateTime's interface.
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
@@ -125,7 +129,7 @@ class DateTime {
      */
     static between(first, last) {
         const f = first instanceof DateTime ? first._value : first, l = last instanceof DateTime ? last._value : last;
-        return new TimeSpan_1.default(l.getTime() - f.getTime());
+        return TimeSpan_1.default.fromMilliseconds(l.getTime() - f.getTime());
     }
     /**
      * Calculates if the given year is a leap year using the formula:

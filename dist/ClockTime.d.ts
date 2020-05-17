@@ -1,12 +1,15 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
- * Originally based upon .NET source but with many additions and improvements.
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 import ClockTimeValue from './ClockTimeValue';
 import TimeQuantity from './TimeQuantity';
 export declare class ClockTime extends TimeQuantity implements Required<ClockTimeValue> {
-    readonly days: number;
+    readonly day: number;
     readonly hour: number;
     readonly minute: number;
     readonly second: number;

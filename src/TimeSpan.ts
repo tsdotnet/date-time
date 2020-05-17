@@ -1,7 +1,11 @@
 ﻿/*!
  * @author electricessence / https://github.com/electricessence/
  * Originally based upon .NET source but with many additions and improvements.
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 
 import type from '@tsdotnet/compare/dist/type';
@@ -50,8 +54,9 @@ export class TimeSpan
 	readonly days: number;
 
 	// In .NET the default type is Ticks, but for JavaScript, we will use Milliseconds.
-	constructor (value: number, units: TimeUnit.Value = TimeUnit.Value.Milliseconds)
+	protected constructor (value: number, units: TimeUnit.UnitType = TimeUnit.UnitType.Milliseconds)
 	{
+		if(isNaN(value)) throw Error('Cannot construct a TimeSpan from NaN value.');
 		const ms = TimeUnit.toMilliseconds(value, units);
 		super(ms);
 
@@ -84,60 +89,93 @@ export class TimeSpan
 	private _time: Lazy<ClockTime>;
 
 	// Instead of the confusing getTotal versus unit name, expose a 'ClockTime' value which reports the individual components.
+
+	/**
+	 * The value of this TimeSpan reduced to the clock and calendar.
+	 * @return {ClockTime}
+	 */
 	get time (): ClockTime
 	{
 		return this._time.value;
 	}
 
-	static from (value: number, units: TimeUnit.Value): TimeSpan
+	static from (values: Partial<TimeMeasurement>): TimeSpan;
+
+	static from (value: number, units: TimeUnit.UnitType): TimeSpan;
+
+	static from (value: number | Partial<TimeMeasurement>, units?: TimeUnit.UnitType): TimeSpan
 	{
-		return new TimeSpan(value, units);
+		if(!value) return TimeSpan.zero;
+		if(typeof value==='number')
+		{
+			if(units===undefined) throw new Error('A numerical value requires a TimeUnit.');
+			return new TimeSpan(value, units);
+		}
+		const ms = TimeQuantity.getTotalMillisecondsFrom(value);
+		return ms ? new TimeSpan(ms) : TimeSpan.zero;
 	}
 
 	static fromDays (value: number): TimeSpan
 	{
-		return new TimeSpan(value, TimeUnit.Value.Days);
+		return value ? new TimeSpan(value, TimeUnit.UnitType.Days) : TimeSpan.zero;
 	}
 
 	static fromHours (value: number): TimeSpan
 	{
-		return new TimeSpan(value, TimeUnit.Value.Hours);
+		return value ? new TimeSpan(value, TimeUnit.UnitType.Hours) : TimeSpan.zero;
 	}
 
 	static fromMinutes (value: number): TimeSpan
 	{
-		return new TimeSpan(value, TimeUnit.Value.Minutes);
+		return value ? new TimeSpan(value, TimeUnit.UnitType.Minutes) : TimeSpan.zero;
 	}
 
 	static fromSeconds (value: number): TimeSpan
 	{
-		return new TimeSpan(value, TimeUnit.Value.Seconds);
+		return value ? new TimeSpan(value, TimeUnit.UnitType.Seconds) : TimeSpan.zero;
 	}
 
 	static fromMilliseconds (value: number): TimeSpan
 	{
-		return new TimeSpan(value, TimeUnit.Value.Milliseconds);
+		return value ? new TimeSpan(value) : TimeSpan.zero;
 	}
 
 	static fromTicks (value: number): TimeSpan
 	{
-		return new TimeSpan(value, TimeUnit.Value.Ticks);
+		return value ? new TimeSpan(value, TimeUnit.UnitType.Ticks) : TimeSpan.zero;
 	}
 
-	add (other: TimeQuantity): TimeSpan
+	/**
+	 * Sum the value of this TimeSpan with another time quantity.
+	 * @param {TimeQuantity | Partial<TimeMeasurement>} other
+	 * @return {TimeSpan}
+	 */
+	add (other: TimeSpan | TimeQuantity | Partial<TimeMeasurement>): TimeSpan
 	{
+		if(!other) return this;
 		if(type.isNumber(other))
 			throw new Error(
-				'Use .addUnit(value:number,units:TimeUnit) to add a numerical value amount.  Default units are milliseconds.\n' +
-				'.add only supports quantifiable time values (ITimeTotal).'
-			);
+				'Use .addUnit(value:number, units:TimeUnit) to add a numerical value amount.  Default units are milliseconds.\n' +
+				'.add only supports quantifiable time values (TimeQuantity).');
 
-		return new TimeSpan(this.getTotalMilliseconds() + other.total.milliseconds);
+		const otherMs = other instanceof TimeQuantity
+			? other.total.milliseconds
+			: TimeQuantity.getTotalMillisecondsFrom(other);
+
+		return new TimeSpan(this.getTotalMilliseconds() + otherMs);
 	}
 
-	addUnit (value: number, units: TimeUnit.Value = TimeUnit.Value.Milliseconds): TimeSpan
+	/**
+	 * Sum the value of this TimeSpan with another unit value.
+	 * @param {number} value
+	 * @param {TimeUnit.UnitType} units
+	 * @return {TimeSpan}
+	 */
+	addUnit (value: number, units: TimeUnit.UnitType = TimeUnit.UnitType.Milliseconds): TimeSpan
 	{
-		return new TimeSpan(this.getTotalMilliseconds() + TimeUnit.toMilliseconds(value, units));
+		return value
+			? new TimeSpan(this.getTotalMilliseconds() + TimeUnit.toMilliseconds(value, units))
+			: this;
 	}
 }
 

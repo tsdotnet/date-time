@@ -1,6 +1,10 @@
 /*!
  * @author electricessence / https://github.com/electricessence/
- * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
+ * @license MIT
+ */
+/**
+ * @packageDocumentation
+ * @module date-time
  */
 
 import areEqual from '@tsdotnet/compare/dist/areEqual';
@@ -16,7 +20,6 @@ import TimeUnit from './TimeUnit';
  */
 export default class TimeQuantity
 {
-
 	constructor (protected _quantity: number = 0)
 	{
 		this._total = ResettableLazy.create(() => {
@@ -31,6 +34,22 @@ export default class TimeQuantity
 				days: ms/milliseconds.per.day
 			});
 		});
+	}
+
+	/**
+	 * Combine total values by time unit.
+	 * @param {Partial<TimeMeasurement>} values
+	 * @return {number}
+	 */
+	static getTotalMillisecondsFrom (values: Partial<TimeMeasurement>): number
+	{
+		if(!values) return 0;
+		return (values.days || 0)*milliseconds.per.day +
+			(values.hours || 0)*milliseconds.per.hour +
+			(values.minutes || 0)*milliseconds.per.minute +
+			(values.seconds || 0)*milliseconds.per.second +
+			(values.milliseconds || 0) +
+			(values.ticks || 0)/ticks.per.millisecond;
 	}
 
 	/**
@@ -87,7 +106,7 @@ export default class TimeQuantity
 	 * @param units
 	 * @returns {number}
 	 */
-	getTotal (units: TimeUnit.Value): number
+	getTotal (units: TimeUnit.UnitType): number
 	{
 		return TimeUnit.fromMilliseconds(this.getTotalMilliseconds(), units);
 	}
