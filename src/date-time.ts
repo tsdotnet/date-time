@@ -11,7 +11,6 @@ import Gregorian from './Calendars/Gregorian';
 import ClockTime from './ClockTime';
 import DateTime from './DateTime';
 import * as howMany from './howMany';
-import Stopwatch from './Stopwatch';
 import TimeQuantity from './TimeQuantity';
 import TimeSpan from './TimeSpan';
 import TimeStamp from './TimeStamp';
@@ -23,7 +22,6 @@ export {
 	ClockTime,
 	DateTime,
 	howMany,
-	Stopwatch,
 	TimeQuantity,
 	TimeSpan,
 	TimeStamp,
