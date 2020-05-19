@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/tsdotnet/date-time#readme",
   "devDependencies": {
-    "@tsdotnet/random": "^1.0.10",
+    "@tsdotnet/random": "^1.0.11",
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
