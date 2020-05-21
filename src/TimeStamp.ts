@@ -7,7 +7,7 @@
  * @module date-time
  */
 
-import type from '@tsdotnet/compare/dist/type';
+import type from '@tsdotnet/type';
 import Gregorian from './Calendars/Gregorian';
 import {ticks} from './howMany';
 import JsDateConvertible from './JsDateConvertable';

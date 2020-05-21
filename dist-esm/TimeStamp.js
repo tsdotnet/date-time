@@ -6,7 +6,7 @@
  * @packageDocumentation
  * @module date-time
  */
-import type from '@tsdotnet/compare/dist/type';
+import type from '@tsdotnet/type';
 /**
  * An alternative to Date or DateTime.  Is a model representing the exact date and time.
  */

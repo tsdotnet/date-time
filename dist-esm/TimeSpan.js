@@ -7,7 +7,7 @@
  * @packageDocumentation
  * @module date-time
  */
-import type from '@tsdotnet/compare/dist/type';
+import type from '@tsdotnet/type';
 import Lazy from '@tsdotnet/lazy';
 import ClockTime from './ClockTime';
 import TimeQuantity from './TimeQuantity';
