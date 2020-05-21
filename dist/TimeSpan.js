@@ -11,8 +11,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TimeSpan = void 0;
 const tslib_1 = require("tslib");
-const type_1 = tslib_1.__importDefault(require("@tsdotnet/type"));
 const lazy_1 = tslib_1.__importDefault(require("@tsdotnet/lazy"));
+const type_1 = tslib_1.__importDefault(require("@tsdotnet/type"));
 const ClockTime_1 = tslib_1.__importDefault(require("./ClockTime"));
 const TimeQuantity_1 = tslib_1.__importDefault(require("./TimeQuantity"));
 const TimeUnit_1 = tslib_1.__importDefault(require("./TimeUnit"));
