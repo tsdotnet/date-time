@@ -1,6 +1,6 @@
 {
   "name": "@tsdotnet/date-time",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "",
   "author": "electricessence",
   "license": "MIT",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/tsdotnet/date-time#readme",
   "devDependencies": {
-    "@tsdotnet/random": "^1.0.11",
+    "@tsdotnet/random": "^1.0.12",
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
     "@typescript-eslint/eslint-plugin": "^3.0.0",
@@ -56,7 +56,7 @@
   "dependencies": {
     "@tsdotnet/compare": "^1.3.13",
     "@tsdotnet/exceptions": "^1.0.16",
-    "@tsdotnet/lazy": "^1.0.16",
+    "@tsdotnet/lazy": "^1.0.17",
     "@tsdotnet/type": "^1.0.8",
     "tslib": "^2.0.0"
   }
