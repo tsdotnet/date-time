@@ -1,6 +1,6 @@
 {
   "name": "@tsdotnet/date-time",
-  "version": "1.0.19",
+  "version": "1.0.18",
   "description": "",
   "author": "electricessence",
   "license": "MIT",
@@ -9,7 +9,7 @@
   "module": "dist-esm/date-time.js",
   "keywords": [],
   "scripts": {
-    "build:dist": "rimraf dist/* dist && tsc && copyfiles -u 1 src/**/*.d.ts",
+    "build:dist": "rimraf dist/* && tsc && copyfiles -u 1 src/**/*.d.ts dist",
     "build:dist-esm": "rimraf dist-esm/* && tsc -p tsconfig.esm.json",
     "build": "pnpm i && run-p build:*",
     "bump": "npm run precommit && npm version patch",
