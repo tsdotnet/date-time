@@ -7,7 +7,7 @@
  * @module date-time
  */
 
-import ClockTimeValue from './ClockTimeValue';
+import ClockTimeValue from './ClockTimeValue.d';
 import * as howMany from './howMany';
 import TimeQuantity from './TimeQuantity';
 import msPer = howMany.milliseconds.per;

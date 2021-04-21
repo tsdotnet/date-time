@@ -12,7 +12,7 @@ import compare from '@tsdotnet/compare/dist/compare';
 import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
 import ResettableLazy from '@tsdotnet/lazy/dist/ResettableLazy';
 import {milliseconds, ticks} from './howMany';
-import TimeMeasurement from './TimeMeasurement';
+import TimeMeasurement from './TimeMeasurement.d';
 import TimeUnit from './TimeUnit';
 
 /**

@@ -8,7 +8,7 @@
  * @module date-time
  */
 import ClockTime from './ClockTime';
-import TimeMeasurement from './TimeMeasurement';
+import TimeMeasurement from './TimeMeasurement.d';
 import TimeQuantity from './TimeQuantity';
 import TimeUnit from './TimeUnit';
 /**

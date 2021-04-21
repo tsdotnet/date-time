@@ -8,7 +8,7 @@
  */
 
 import CalendarDate from './CalendarDate';
-import ClockTimeValue from './ClockTimeValue';
+import ClockTimeValue from './ClockTimeValue.d';
 
 export interface TimeStampValue
 	extends CalendarDate, Partial<ClockTimeValue>
