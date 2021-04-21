@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>per | @tsdotnet/date-time - v1.0.15</title>
+	<title>default | @tsdotnet/date-time - v1.0.15</title>
 	<meta name="description" content="Documentation for @tsdotnet/date-time - v1.0.15">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,10 @@
 					<a href="../modules/date_time.html">date-time</a>
 				</li>
 				<li>
-					<a href="../modules/date_time.ticks.html">ticks</a>
-				</li>
-				<li>
-					<a href="date_time.ticks.per.html">per</a>
+					<a href="date_time.default.html">default</a>
 				</li>
 			</ul>
-			<h1>Enumeration per</h1>
+			<h1>Enumeration default</h1>
 		</div>
 	</div>
 </header>
@@ -76,11 +73,9 @@
 						<section class="tsd-index-section ">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="date_time.ticks.per.html#day" class="tsd-kind-icon">day</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="date_time.ticks.per.html#hour" class="tsd-kind-icon">hour</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="date_time.ticks.per.html#millisecond" class="tsd-kind-icon">millisecond</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="date_time.ticks.per.html#minute" class="tsd-kind-icon">minute</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="date_time.ticks.per.html#second" class="tsd-kind-icon">second</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="date_time.default.html#local" class="tsd-kind-icon">Local</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="date_time.default.html#unspecified" class="tsd-kind-icon">Unspecified</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="date_time.default.html#utc" class="tsd-kind-icon">Utc</a></li>
 							</ul>
 						</section>
 					</div>
@@ -89,52 +84,32 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="day" class="tsd-anchor"></a>
-					<h3>day</h3>
-					<div class="tsd-signature tsd-kind-icon">day<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 864000000000</span></div>
+					<a name="local" class="tsd-anchor"></a>
+					<h3>Local</h3>
+					<div class="tsd-signature tsd-kind-icon">Local<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tsdotnet/date-time/blob/3284ae5/src/howMany.d.ts#L59">howMany.d.ts:59</a></li>
+							<li>Defined in <a href="https://github.com/tsdotnet/date-time/blob/3284ae5/src/DateTimeKind.d.ts#L14">DateTimeKind.d.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="hour" class="tsd-anchor"></a>
-					<h3>hour</h3>
-					<div class="tsd-signature tsd-kind-icon">hour<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 36000000000</span></div>
+					<a name="unspecified" class="tsd-anchor"></a>
+					<h3>Unspecified</h3>
+					<div class="tsd-signature tsd-kind-icon">Unspecified<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 0</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tsdotnet/date-time/blob/3284ae5/src/howMany.d.ts#L58">howMany.d.ts:58</a></li>
+							<li>Defined in <a href="https://github.com/tsdotnet/date-time/blob/3284ae5/src/DateTimeKind.d.ts#L13">DateTimeKind.d.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="millisecond" class="tsd-anchor"></a>
-					<h3>millisecond</h3>
-					<div class="tsd-signature tsd-kind-icon">millisecond<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 10000</span></div>
+					<a name="utc" class="tsd-anchor"></a>
+					<h3>Utc</h3>
+					<div class="tsd-signature tsd-kind-icon">Utc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 2</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tsdotnet/date-time/blob/3284ae5/src/howMany.d.ts#L55">howMany.d.ts:55</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="minute" class="tsd-anchor"></a>
-					<h3>minute</h3>
-					<div class="tsd-signature tsd-kind-icon">minute<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 600000000</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/tsdotnet/date-time/blob/3284ae5/src/howMany.d.ts#L57">howMany.d.ts:57</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="second" class="tsd-anchor"></a>
-					<h3>second</h3>
-					<div class="tsd-signature tsd-kind-icon">second<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 10000000</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/tsdotnet/date-time/blob/3284ae5/src/howMany.d.ts#L56">howMany.d.ts:56</a></li>
+							<li>Defined in <a href="https://github.com/tsdotnet/date-time/blob/3284ae5/src/DateTimeKind.d.ts#L15">DateTimeKind.d.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -164,28 +139,11 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/date_time.html">date-<wbr>time</a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/date_time.html">date-<wbr>time</a>
-					</li>
 					<li class="current tsd-kind-module">
 						<a href="../modules/date_time.html">date-<wbr>time</a>
-						<ul>
-							<li class=" tsd-kind-namespace tsd-parent-kind-module">
-								<a href="../modules/date_time.hours.html">hours</a>
-							</li>
-							<li class=" tsd-kind-namespace tsd-parent-kind-module">
-								<a href="../modules/date_time.milliseconds.html">milliseconds</a>
-							</li>
-							<li class=" tsd-kind-namespace tsd-parent-kind-module">
-								<a href="../modules/date_time.minutes.html">minutes</a>
-							</li>
-							<li class=" tsd-kind-namespace tsd-parent-kind-module">
-								<a href="../modules/date_time.seconds.html">seconds</a>
-							</li>
-							<li class="current tsd-kind-namespace tsd-parent-kind-module">
-								<a href="../modules/date_time.ticks.html">ticks</a>
-							</li>
-						</ul>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/date_time.html">date-<wbr>time</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/date_time.html">date-<wbr>time</a>
@@ -217,23 +175,17 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-enum tsd-parent-kind-namespace">
-						<a href="date_time.ticks.per.html" class="tsd-kind-icon">per</a>
+					<li class="current tsd-kind-enum tsd-parent-kind-module">
+						<a href="date_time.default.html" class="tsd-kind-icon">default</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="date_time.ticks.per.html#day" class="tsd-kind-icon">day</a>
+								<a href="date_time.default.html#local" class="tsd-kind-icon">Local</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="date_time.ticks.per.html#hour" class="tsd-kind-icon">hour</a>
+								<a href="date_time.default.html#unspecified" class="tsd-kind-icon">Unspecified</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="date_time.ticks.per.html#millisecond" class="tsd-kind-icon">millisecond</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="date_time.ticks.per.html#minute" class="tsd-kind-icon">minute</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="date_time.ticks.per.html#second" class="tsd-kind-icon">second</a>
+								<a href="date_time.default.html#utc" class="tsd-kind-icon">Utc</a>
 							</li>
 						</ul>
 					</li>
