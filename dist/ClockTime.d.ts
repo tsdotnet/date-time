@@ -6,7 +6,7 @@
  * @packageDocumentation
  * @module date-time
  */
-import ClockTimeValue from './ClockTimeValue.d';
+import ClockTimeValue from './ClockTimeValue';
 import TimeQuantity from './TimeQuantity';
 export declare class ClockTime extends TimeQuantity implements Required<ClockTimeValue> {
     readonly day: number;

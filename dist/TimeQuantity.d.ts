@@ -7,7 +7,7 @@
  * @module date-time
  */
 import ResettableLazy from '@tsdotnet/lazy/dist/ResettableLazy';
-import TimeMeasurement from './TimeMeasurement.d';
+import TimeMeasurement from './TimeMeasurement';
 import TimeUnit from './TimeUnit';
 /**
  * This class provides a simple means for storing and calculating time quantities.
