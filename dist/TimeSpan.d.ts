@@ -3,10 +3,6 @@
  * Originally based upon .NET source but with many additions and improvements.
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 import ClockTime from './ClockTime';
 import TimeMeasurement from './TimeMeasurement';
 import TimeQuantity from './TimeQuantity';

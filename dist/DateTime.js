@@ -4,10 +4,6 @@
  * Based on .NET DateTime's interface.
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const ArgumentNullException_1 = tslib_1.__importDefault(require("@tsdotnet/exceptions/dist/ArgumentNullException"));

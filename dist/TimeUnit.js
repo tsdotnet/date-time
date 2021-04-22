@@ -4,10 +4,6 @@
  * Originally based upon .NET source but with many additions and improvements.
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TimeUnit = void 0;
 /* eslint-disable no-fallthrough */

@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 
 import ClockTimeValue from './ClockTimeValue';
 import * as howMany from './howMany';

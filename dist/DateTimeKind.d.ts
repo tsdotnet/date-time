@@ -3,10 +3,7 @@
  * @license MIT
  */
 
-/**
- * @packageDocumentation
- * @module date-time
- */
+
 
 declare const enum DateTimeKind
 {

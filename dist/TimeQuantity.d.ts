@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 import ResettableLazy from '@tsdotnet/lazy/dist/ResettableLazy';
 import TimeMeasurement from './TimeMeasurement';
 import TimeUnit from './TimeUnit';

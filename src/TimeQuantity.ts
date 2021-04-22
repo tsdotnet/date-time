@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 
 import areEqual from '@tsdotnet/compare/dist/areEqual';
 import compare from '@tsdotnet/compare/dist/compare';

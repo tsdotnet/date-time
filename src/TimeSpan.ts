@@ -3,10 +3,6 @@
  * Originally based upon .NET source but with many additions and improvements.
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 
 import Lazy from '@tsdotnet/lazy';
 import type from '@tsdotnet/type';

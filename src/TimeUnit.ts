@@ -3,10 +3,6 @@
  * Originally based upon .NET source but with many additions and improvements.
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 
 import {hours, milliseconds, minutes, seconds, ticks} from './howMany';
 import TimeQuantity from './TimeQuantity';

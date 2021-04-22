@@ -3,10 +3,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TimeUnitValue = exports.TimeUnit = exports.TimeStamp = exports.TimeSpan = exports.TimeQuantity = exports.howMany = exports.DateTime = exports.ClockTime = void 0;
 const tslib_1 = require("tslib");

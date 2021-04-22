@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 import type from '@tsdotnet/type';
 /**
  * An alternative to Date or DateTime.  Is a model representing the exact date and time.

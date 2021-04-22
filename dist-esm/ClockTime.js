@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 import TimeQuantity from './TimeQuantity';
 export class ClockTime extends TimeQuantity {
     constructor(...args) {

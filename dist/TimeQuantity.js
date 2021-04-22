@@ -3,10 +3,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const areEqual_1 = tslib_1.__importDefault(require("@tsdotnet/compare/dist/areEqual"));

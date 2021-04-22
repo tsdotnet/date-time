@@ -3,10 +3,6 @@
  * Based on .NET DateTime's interface.
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 
 import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
 import CalendarDate from './CalendarDate';

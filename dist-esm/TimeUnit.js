@@ -3,10 +3,6 @@
  * Originally based upon .NET source but with many additions and improvements.
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 /* eslint-disable no-fallthrough */
 export var TimeUnit;
 (function (TimeUnit) {

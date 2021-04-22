@@ -3,10 +3,6 @@
  * Based on .NET DateTime's interface.
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module date-time
- */
 import CalendarDate from './CalendarDate';
 import Gregorian from './Calendars/Gregorian';
 import ClockTime from './ClockTime';
