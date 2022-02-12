@@ -1,9 +1,6 @@
 {
   "entryPoints": [
-    "./src"
-  ],
-  "exclude": [
-    "./src/index.ts"
+    "./src/date-time.ts"
   ],
   "out": "docs",
   "includeVersion": true,
