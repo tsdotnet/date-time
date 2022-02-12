@@ -10,7 +10,7 @@ import Gregorian from './Calendars/Gregorian';
 import ClockTime from './ClockTime';
 import DateTimeKind from './DateTimeKind';
 import {milliseconds} from './howMany';
-import JsDateConvertible from './JsDateConvertable';
+import JsDateConvertible from './JsDateConvertible';
 import TimeQuantity from './TimeQuantity';
 import TimeSpan from './TimeSpan';
 import TimeStamp from './TimeStamp';
@@ -18,7 +18,7 @@ import TimeStamp from './TimeStamp';
 const VOID0: undefined = void 0;
 
 export default class DateTime
-	implements CalendarDate, JsDateConvertible
+implements CalendarDate, JsDateConvertible
 {
 	private readonly _value: Date;
 	private readonly _kind: DateTimeKind;
@@ -387,7 +387,7 @@ export default class DateTime
 	 * @param other
 	 * @returns {boolean}
 	 */
-	equals (other: Date): boolean
+	equals (other: Date): boolean;
 
 	/**
 	 * Compares another JsDateConvertible object and returns true if they or their value are equal.
@@ -395,7 +395,7 @@ export default class DateTime
 	 * @param strict When strict is true, the 'kind' also must match.
 	 * @returns {boolean}
 	 */
-	equals (other: JsDateConvertible, strict?: boolean): boolean
+	equals (other: JsDateConvertible, strict?: boolean): boolean;
 
 	equals (other: Date | JsDateConvertible, strict: boolean = false): boolean
 	{

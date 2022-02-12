@@ -6,14 +6,14 @@
 import type from '@tsdotnet/type';
 import Gregorian from './Calendars/Gregorian';
 import {ticks} from './howMany';
-import JsDateConvertible from './JsDateConvertable';
-import {TimeStampValue} from './TimeStampValue';
+import JsDateConvertible from './JsDateConvertible';
+import TimeStampValue from './TimeStampValue';
 
 /**
  * An alternative to Date or DateTime.  Is a model representing the exact date and time.
  */
 export class TimeStamp
-	implements Required<TimeStampValue>, JsDateConvertible
+implements Required<TimeStampValue>, JsDateConvertible
 {
 
 	constructor (

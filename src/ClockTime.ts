@@ -27,10 +27,10 @@ export class ClockTime
 		super(
 			args.length>1
 				? ClockTime.millisecondsFromTime(
-				args[0] || 0,
-				args[1] || 0,
-				args.length>2 && args[2] || 0,
-				args.length>3 && args[3] || 0
+					args[0] || 0,
+					args[1] || 0,
+					args.length>2 && args[2] || 0,
+					args.length>3 && args[3] || 0
 				)
 				: (args.length>0 && args[0] || 0)
 		);

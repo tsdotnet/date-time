@@ -3,8 +3,8 @@
  * @license MIT
  */
 import Gregorian from './Calendars/Gregorian';
-import JsDateConvertible from './JsDateConvertable';
-import { TimeStampValue } from './TimeStampValue';
+import JsDateConvertible from './JsDateConvertible';
+import TimeStampValue from './TimeStampValue';
 /**
  * An alternative to Date or DateTime.  Is a model representing the exact date and time.
  */

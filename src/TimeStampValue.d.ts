@@ -6,7 +6,7 @@
 import CalendarDate from './CalendarDate';
 import ClockTimeValue from './ClockTimeValue';
 
-export interface TimeStampValue
+export default interface TimeStampValue
 	extends CalendarDate, Partial<ClockTimeValue>
 {
 
