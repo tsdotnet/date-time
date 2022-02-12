@@ -6,10 +6,10 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const ArgumentNullException_1 = tslib_1.__importDefault(require("@tsdotnet/exceptions/dist/ArgumentNullException"));
-const ClockTime_1 = tslib_1.__importDefault(require("./ClockTime"));
-const TimeSpan_1 = tslib_1.__importDefault(require("./TimeSpan"));
-const TimeStamp_1 = tslib_1.__importDefault(require("./TimeStamp"));
+const ArgumentNullException_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/exceptions/dist/ArgumentNullException"));
+const ClockTime_1 = (0, tslib_1.__importDefault)(require("./ClockTime"));
+const TimeSpan_1 = (0, tslib_1.__importDefault)(require("./TimeSpan"));
+const TimeStamp_1 = (0, tslib_1.__importDefault)(require("./TimeStamp"));
 const VOID0 = void 0;
 class DateTime {
     constructor(value = new Date(), kind = 1 /* Local */) {

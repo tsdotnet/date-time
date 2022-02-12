@@ -5,11 +5,11 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const areEqual_1 = tslib_1.__importDefault(require("@tsdotnet/compare/dist/areEqual"));
-const compare_1 = tslib_1.__importDefault(require("@tsdotnet/compare/dist/compare"));
-const ArgumentNullException_1 = tslib_1.__importDefault(require("@tsdotnet/exceptions/dist/ArgumentNullException"));
-const ResettableLazy_1 = tslib_1.__importDefault(require("@tsdotnet/lazy/dist/ResettableLazy"));
-const TimeUnit_1 = tslib_1.__importDefault(require("./TimeUnit"));
+const areEqual_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/compare/dist/areEqual"));
+const compare_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/compare/dist/compare"));
+const ArgumentNullException_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/exceptions/dist/ArgumentNullException"));
+const ResettableLazy_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/lazy/dist/ResettableLazy"));
+const TimeUnit_1 = (0, tslib_1.__importDefault)(require("./TimeUnit"));
 /**
  * This class provides a simple means for storing and calculating time quantities.
  */
@@ -48,7 +48,7 @@ class TimeQuantity {
      * @returns {number}
      */
     get direction() {
-        return compare_1.default(this.getTotalMilliseconds(), 0);
+        return (0, compare_1.default)(this.getTotalMilliseconds(), 0);
     }
     /**
      * Returns an object with all units exposed as totals.
@@ -69,7 +69,7 @@ class TimeQuantity {
     equals(other) {
         if (!other || !other.total)
             return false;
-        return areEqual_1.default(this.getTotalMilliseconds(), other.total.milliseconds);
+        return (0, areEqual_1.default)(this.getTotalMilliseconds(), other.total.milliseconds);
     }
     /**
      * Compares this instance against any other time quantity instance.
@@ -81,7 +81,7 @@ class TimeQuantity {
             throw new ArgumentNullException_1.default('other');
         if (!other.total)
             throw new ArgumentNullException_1.default('other.total');
-        return compare_1.default(this.getTotalMilliseconds(), other && other.total && other.total.milliseconds);
+        return (0, compare_1.default)(this.getTotalMilliseconds(), other && other.total && other.total.milliseconds);
     }
     /**
      * Returns the total amount of time measured in the requested TimeUnit.

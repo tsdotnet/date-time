@@ -6,7 +6,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TimeStamp = void 0;
 const tslib_1 = require("tslib");
-const type_1 = tslib_1.__importDefault(require("@tsdotnet/type"));
+const type_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/type"));
 /**
  * An alternative to Date or DateTime.  Is a model representing the exact date and time.
  */
