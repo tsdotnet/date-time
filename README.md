@@ -8,4 +8,4 @@
 
 ## Docs
 
-[tsdotnet.github.io/date-time](https://tsdotnet.github.io/date-time/modules/date_time.html)
+[tsdotnet.github.io/date-time](https://tsdotnet.github.io/date-time/)
