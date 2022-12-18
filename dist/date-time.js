@@ -6,20 +6,20 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TimeUnitValue = exports.TimeUnit = exports.TimeStamp = exports.TimeSpan = exports.TimeQuantity = exports.howMany = exports.DateTime = exports.ClockTime = void 0;
 const tslib_1 = require("tslib");
-const ClockTime_1 = (0, tslib_1.__importDefault)(require("./ClockTime"));
+const ClockTime_1 = tslib_1.__importDefault(require("./ClockTime"));
 exports.ClockTime = ClockTime_1.default;
-const DateTime_1 = (0, tslib_1.__importDefault)(require("./DateTime"));
+const DateTime_1 = tslib_1.__importDefault(require("./DateTime"));
 exports.DateTime = DateTime_1.default;
-const howMany = (0, tslib_1.__importStar)(require("./howMany"));
+const howMany = tslib_1.__importStar(require("./howMany"));
 exports.howMany = howMany;
-const TimeQuantity_1 = (0, tslib_1.__importDefault)(require("./TimeQuantity"));
+const TimeQuantity_1 = tslib_1.__importDefault(require("./TimeQuantity"));
 exports.TimeQuantity = TimeQuantity_1.default;
-const TimeSpan_1 = (0, tslib_1.__importDefault)(require("./TimeSpan"));
+const TimeSpan_1 = tslib_1.__importDefault(require("./TimeSpan"));
 exports.TimeSpan = TimeSpan_1.default;
-const TimeStamp_1 = (0, tslib_1.__importDefault)(require("./TimeStamp"));
+const TimeStamp_1 = tslib_1.__importDefault(require("./TimeStamp"));
 exports.TimeStamp = TimeStamp_1.default;
-const TimeUnit_1 = (0, tslib_1.__importDefault)(require("./TimeUnit"));
+const TimeUnit_1 = tslib_1.__importDefault(require("./TimeUnit"));
 exports.TimeUnit = TimeUnit_1.default;
-const TimeUnitValue_1 = (0, tslib_1.__importDefault)(require("./TimeUnitValue"));
+const TimeUnitValue_1 = tslib_1.__importDefault(require("./TimeUnitValue"));
 exports.TimeUnitValue = TimeUnitValue_1.default;
 //# sourceMappingURL=date-time.js.map

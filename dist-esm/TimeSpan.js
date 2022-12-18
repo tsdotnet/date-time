@@ -18,12 +18,12 @@ export class TimeSpan extends TimeQuantity {
             throw Error('Cannot construct a TimeSpan from NaN value.');
         const ms = TimeUnit.toMilliseconds(value, units);
         super(ms);
-        this.ticks = ms * 10000 /* millisecond */;
+        this.ticks = ms * 10000 /* ticks.per.millisecond */;
         this.milliseconds = ms;
-        this.seconds = ms / 1000 /* second */;
-        this.minutes = ms / 60000 /* minute */;
-        this.hours = ms / 3600000 /* hour */;
-        this.days = ms / 86400000 /* day */;
+        this.seconds = ms / 1000 /* milliseconds.per.second */;
+        this.minutes = ms / 60000 /* milliseconds.per.minute */;
+        this.hours = ms / 3600000 /* milliseconds.per.hour */;
+        this.days = ms / 86400000 /* milliseconds.per.day */;
         this._time = Lazy.create(() => new ClockTime(this.getTotalMilliseconds()));
         Object.freeze(this);
     }

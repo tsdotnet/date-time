@@ -28,17 +28,17 @@ export var TimeUnit;
         // noinspection FallThroughInSwitchStatementJS
         switch (units) {
             case UnitType.Days:
-                value *= 24 /* day */;
+                value *= 24 /* hours.per.day */;
             case UnitType.Hours:
-                value *= 60 /* hour */;
+                value *= 60 /* minutes.per.hour */;
             case UnitType.Minutes:
-                value *= 60 /* minute */;
+                value *= 60 /* seconds.per.minute */;
             case UnitType.Seconds:
-                value *= 1000 /* second */;
+                value *= 1000 /* milliseconds.per.second */;
             case UnitType.Milliseconds:
                 return value;
             case UnitType.Ticks:
-                return value / 10000 /* millisecond */;
+                return value / 10000 /* ticks.per.millisecond */;
             default:
                 throw new Error('Invalid TimeUnit.');
         }
@@ -53,17 +53,17 @@ export var TimeUnit;
     function fromMilliseconds(ms, units) {
         switch (units) {
             case UnitType.Days:
-                return ms / 86400000 /* day */;
+                return ms / 86400000 /* milliseconds.per.day */;
             case UnitType.Hours:
-                return ms / 3600000 /* hour */;
+                return ms / 3600000 /* milliseconds.per.hour */;
             case UnitType.Minutes:
-                return ms / 60000 /* minute */;
+                return ms / 60000 /* milliseconds.per.minute */;
             case UnitType.Seconds:
-                return ms / 1000 /* second */;
+                return ms / 1000 /* milliseconds.per.second */;
             case UnitType.Milliseconds:
                 return ms;
             case UnitType.Ticks:
-                return ms * 10000 /* millisecond */;
+                return ms * 10000 /* ticks.per.millisecond */;
             default:
                 throw new Error('Invalid TimeUnit.');
         }

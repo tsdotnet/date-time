@@ -6,7 +6,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TimeStamp = void 0;
 const tslib_1 = require("tslib");
-const type_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/type"));
+const type_1 = tslib_1.__importDefault(require("@tsdotnet/type"));
 /**
  * An alternative to Date or DateTime.  Is a model representing the exact date and time.
  */
@@ -38,7 +38,7 @@ class TimeStamp {
     }
     toJsDate() {
         const _ = this;
-        return new Date(_.year, _.month, _.day, _.hour, _.minute, _.second, _.millisecond + _.tick / 10000 /* millisecond */);
+        return new Date(_.year, _.month, _.day, _.hour, _.minute, _.second, _.millisecond + _.tick / 10000 /* ticks.per.millisecond */);
     }
 }
 exports.TimeStamp = TimeStamp;

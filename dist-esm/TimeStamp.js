@@ -34,7 +34,7 @@ export class TimeStamp {
     }
     toJsDate() {
         const _ = this;
-        return new Date(_.year, _.month, _.day, _.hour, _.minute, _.second, _.millisecond + _.tick / 10000 /* millisecond */);
+        return new Date(_.year, _.month, _.day, _.hour, _.minute, _.second, _.millisecond + _.tick / 10000 /* ticks.per.millisecond */);
     }
 }
 export default TimeStamp;

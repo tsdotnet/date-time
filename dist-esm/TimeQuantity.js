@@ -16,12 +16,12 @@ export default class TimeQuantity {
         this._total = ResettableLazy.create(() => {
             const ms = this.getTotalMilliseconds();
             return Object.freeze({
-                ticks: ms * 10000 /* millisecond */,
+                ticks: ms * 10000 /* ticks.per.millisecond */,
                 milliseconds: ms,
-                seconds: ms / 1000 /* second */,
-                minutes: ms / 60000 /* minute */,
-                hours: ms / 3600000 /* hour */,
-                days: ms / 86400000 /* day */
+                seconds: ms / 1000 /* milliseconds.per.second */,
+                minutes: ms / 60000 /* milliseconds.per.minute */,
+                hours: ms / 3600000 /* milliseconds.per.hour */,
+                days: ms / 86400000 /* milliseconds.per.day */
             });
         });
     }
@@ -33,12 +33,12 @@ export default class TimeQuantity {
     static getTotalMillisecondsFrom(values) {
         if (!values)
             return 0;
-        return (values.days || 0) * 86400000 /* day */ +
-            (values.hours || 0) * 3600000 /* hour */ +
-            (values.minutes || 0) * 60000 /* minute */ +
-            (values.seconds || 0) * 1000 /* second */ +
+        return (values.days || 0) * 86400000 /* milliseconds.per.day */ +
+            (values.hours || 0) * 3600000 /* milliseconds.per.hour */ +
+            (values.minutes || 0) * 60000 /* milliseconds.per.minute */ +
+            (values.seconds || 0) * 1000 /* milliseconds.per.second */ +
             (values.milliseconds || 0) +
-            (values.ticks || 0) / 10000 /* millisecond */;
+            (values.ticks || 0) / 10000 /* ticks.per.millisecond */;
     }
     /**
      * +1, 0, or -1 depending on the time direction.

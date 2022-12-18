@@ -6,7 +6,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ClockTime = void 0;
 const tslib_1 = require("tslib");
-const TimeQuantity_1 = (0, tslib_1.__importDefault)(require("./TimeQuantity"));
+const TimeQuantity_1 = tslib_1.__importDefault(require("./TimeQuantity"));
 class ClockTime extends TimeQuantity_1.default {
     constructor(...args) {
         super(args.length > 1
@@ -14,15 +14,15 @@ class ClockTime extends TimeQuantity_1.default {
             : (args.length > 0 && args[0] || 0));
         const ms = Math.abs(this.getTotalMilliseconds());
         let msi = Math.floor(ms);
-        this.tick = (ms - msi) * 10000 /* millisecond */;
-        this.day = (msi / 86400000 /* day */) | 0;
-        msi -= this.day * 86400000 /* day */;
-        this.hour = (msi / 3600000 /* hour */) | 0;
-        msi -= this.hour * 3600000 /* hour */;
-        this.minute = (msi / 60000 /* minute */) | 0;
-        msi -= this.minute * 60000 /* minute */;
-        this.second = (msi / 1000 /* second */) | 0;
-        msi -= this.second * 1000 /* second */;
+        this.tick = (ms - msi) * 10000 /* howMany.ticks.per.millisecond */;
+        this.day = (msi / 86400000 /* msPer.day */) | 0;
+        msi -= this.day * 86400000 /* howMany.milliseconds.per.day */;
+        this.hour = (msi / 3600000 /* msPer.hour */) | 0;
+        msi -= this.hour * 3600000 /* msPer.hour */;
+        this.minute = (msi / 60000 /* msPer.minute */) | 0;
+        msi -= this.minute * 60000 /* msPer.minute */;
+        this.second = (msi / 1000 /* msPer.second */) | 0;
+        msi -= this.second * 1000 /* msPer.second */;
         this.millisecond = msi;
         Object.freeze(this);
     }
@@ -32,11 +32,11 @@ class ClockTime extends TimeQuantity_1.default {
     }
     static millisecondsFromTime(hours, minutes, seconds = 0, milliseconds = 0) {
         let value = hours;
-        value *= 60 /* hour */;
+        value *= 60 /* howMany.minutes.per.hour */;
         value += minutes;
-        value *= 60 /* minute */;
+        value *= 60 /* howMany.seconds.per.minute */;
         value += seconds;
-        value *= 1000 /* second */;
+        value *= 1000 /* howMany.milliseconds.per.second */;
         value += milliseconds;
         return value;
     }
