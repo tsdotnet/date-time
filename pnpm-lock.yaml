@@ -4,7 +4,7 @@ specifiers:
   '@tsdotnet/compare': ^1.3.22
   '@tsdotnet/exceptions': ^1.0.19
   '@tsdotnet/lazy': ^1.0.25
-  '@tsdotnet/random': ^1.0.15
+  '@tsdotnet/random': ^1.0.16
   '@tsdotnet/type': ^1.0.14
   '@types/chai': ^4.3.4
   '@types/mocha': ^10.0.1
@@ -35,7 +35,7 @@ dependencies:
   tslib: 2.4.1
 
 devDependencies:
-  '@tsdotnet/random': 1.0.15
+  '@tsdotnet/random': 1.0.17
   '@types/chai': 4.3.4
   '@types/mocha': 10.0.1
   '@types/node': 18.11.17
@@ -342,8 +342,8 @@ packages:
     resolution: {integrity: sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==}
     dev: true
 
-  /@tsdotnet/array-copy/1.0.17:
-    resolution: {integrity: sha512-F2FUEEejH+rLxke0GNsWxCYUB3vPGH5xkJ/GXQpQMoU15oT1wOitWodiU4gxp9Ti0xqQPvYNAu//xaQInZOtfg==}
+  /@tsdotnet/array-copy/1.0.18:
+    resolution: {integrity: sha512-PMqoLT8yEWOQvXtG7WpYZgYlt/oWChZatcBNvgpJK+WH3z2j3JO5Xitwn/U4svDt9IcP/3dLGFMmFU5oFeAxzQ==}
     dependencies:
       '@tsdotnet/array-init': 1.0.11
       '@tsdotnet/exceptions': 1.0.19
@@ -377,8 +377,8 @@ packages:
     dependencies:
       tslib: 2.4.1
 
-  /@tsdotnet/integer/1.0.14:
-    resolution: {integrity: sha512-jgFSij2gcdNucRVg0I4Qcuj6AuxlfOWrRSxgRkMl9s/nEJSxmESWxC7txoVZONVKoYPaITFfjlXLyR3VV5SQyQ==}
+  /@tsdotnet/integer/1.0.15:
+    resolution: {integrity: sha512-aXZbigUw7LFddMExSgX/8YhIlx0tBfRfa6PIB3tYJ2YHTUF0QNlLCVSQdT77lGOcuVFKSPROpj/yqqQ25IzTvA==}
     dependencies:
       '@tsdotnet/exceptions': 1.0.19
       tslib: 2.4.1
@@ -391,12 +391,12 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@tsdotnet/random/1.0.15:
-    resolution: {integrity: sha512-/HUBVRnl1xvPqOhkpbfEXhisrLM+AYJkPpFnz+CsrYWk+mIKKjdxfeuWQNlXJ8Sd6DGkzFlBz00AifsNc0OUYg==}
+  /@tsdotnet/random/1.0.17:
+    resolution: {integrity: sha512-ZhKnBnOpdwefeH5aQEjvtKweENzknzg5wjl3SUnDgYlHJhYFMYgGVjb+mKfjYw1vonn8AHEViubQb/OJZ0uu1w==}
     dependencies:
-      '@tsdotnet/array-copy': 1.0.17
+      '@tsdotnet/array-copy': 1.0.18
       '@tsdotnet/array-init': 1.0.11
-      '@tsdotnet/integer': 1.0.14
+      '@tsdotnet/integer': 1.0.15
       tslib: 2.4.1
     dev: true
 
