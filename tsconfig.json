@@ -10,7 +10,8 @@
     "removeComments": false,
     "importHelpers": true,
     "moduleResolution": "node",
-    "outDir": "dist"
+    "outDir": "dist",
+    "preserveConstEnums": true
   },
   "include": [
     "src/**/*"

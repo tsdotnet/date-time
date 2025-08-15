@@ -4,7 +4,7 @@
  */
 
 
-export declare namespace hours
+export namespace hours
 {
 	export const enum per
 	{
@@ -12,7 +12,7 @@ export declare namespace hours
 	}
 }
 
-export declare namespace minutes
+export namespace minutes
 {
 	export const enum per
 	{
@@ -22,7 +22,7 @@ export declare namespace minutes
 
 }
 
-export declare namespace seconds
+export namespace seconds
 {
 	export const enum per
 	{
@@ -33,7 +33,7 @@ export declare namespace seconds
 
 }
 
-export declare namespace milliseconds
+export namespace milliseconds
 {
 	export const enum per
 	{
@@ -45,7 +45,7 @@ export declare namespace milliseconds
 
 }
 
-export declare namespace ticks
+export namespace ticks
 {
 	export const enum per
 	{
