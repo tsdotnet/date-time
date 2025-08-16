@@ -340,8 +340,8 @@ packages:
   '@tsdotnet/exceptions@1.0.19':
     resolution: {integrity: sha512-P/Gb4bp6CAXR0Xnq9YV9c7XU3oTGRsoQKiP6pvN1dp2bCY0YC2w9FZU3ZrAsMWv6kX/KkHBjhidC4Bv4oLQdxQ==}
 
-  '@tsdotnet/integer@1.0.15':
-    resolution: {integrity: sha512-aXZbigUw7LFddMExSgX/8YhIlx0tBfRfa6PIB3tYJ2YHTUF0QNlLCVSQdT77lGOcuVFKSPROpj/yqqQ25IzTvA==}
+  '@tsdotnet/integer@1.1.0':
+    resolution: {integrity: sha512-95izjIihM4O/nDP9zN8oLgl4omzNkKh5mXgCCFNyuUCH26SB5r7/l+PLaW4ohDGlixTspdIl0efwA84Qsmlfiw==}
 
   '@tsdotnet/lazy@1.0.25':
     resolution: {integrity: sha512-/lmNwDJhprs1rDvzldAoqum/P23MbTLrpRR1wUHuqG7SCWEhSpIcOLm+4NzsCTbgXa3TgqvQzAJN05xOLBkCVg==}
@@ -2388,7 +2388,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@tsdotnet/integer@1.0.15':
+  '@tsdotnet/integer@1.1.0':
     dependencies:
       '@tsdotnet/exceptions': 1.0.19
       tslib: 2.8.1
@@ -2402,7 +2402,7 @@ snapshots:
     dependencies:
       '@tsdotnet/array-copy': 1.0.18
       '@tsdotnet/array-init': 1.0.11
-      '@tsdotnet/integer': 1.0.15
+      '@tsdotnet/integer': 1.1.0
       tslib: 2.8.1
 
   '@tsdotnet/type@1.0.14':
