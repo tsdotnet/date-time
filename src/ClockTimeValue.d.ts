@@ -11,4 +11,5 @@ export default interface ClockTimeValue
 	second?: number;
 	millisecond?: number;
 	tick?: number;
+// eslint-disable-next-line semi
 }

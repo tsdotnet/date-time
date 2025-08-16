@@ -3,12 +3,11 @@
  * @license MIT
  */
 
-import areEqual from '@tsdotnet/compare/dist/areEqual';
-import compare from '@tsdotnet/compare/dist/compare';
-import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
-import ResettableLazy from '@tsdotnet/lazy/dist/ResettableLazy';
+import {areEqual, compare} from '@tsdotnet/compare';
+import {ArgumentNullException} from '@tsdotnet/exceptions';
+import {ResettableLazy} from '@tsdotnet/lazy';
 import {milliseconds, ticks} from './howMany';
-import TimeMeasurement from './TimeMeasurement';
+import type TimeMeasurement from './TimeMeasurement';
 import TimeUnit from './TimeUnit';
 
 /**

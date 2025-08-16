@@ -6,7 +6,7 @@
 
 export namespace hours
 {
-	export const enum per
+	export enum per
 	{
 		day = 24
 	}
@@ -14,7 +14,7 @@ export namespace hours
 
 export namespace minutes
 {
-	export const enum per
+	export enum per
 	{
 		hour = 60,
 		day  = hour*hours.per.day
@@ -24,7 +24,7 @@ export namespace minutes
 
 export namespace seconds
 {
-	export const enum per
+	export enum per
 	{
 		minute = 60,
 		hour   = minute*minutes.per.hour,
@@ -35,7 +35,7 @@ export namespace seconds
 
 export namespace milliseconds
 {
-	export const enum per
+	export enum per
 	{
 		second = 1000,
 		minute = second*seconds.per.minute,
@@ -47,7 +47,7 @@ export namespace milliseconds
 
 export namespace ticks
 {
-	export const enum per
+	export enum per
 	{
 		millisecond = 10000,
 		second      = millisecond*milliseconds.per.second,

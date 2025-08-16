@@ -9,4 +9,5 @@ export default interface CalendarDate
 	year: number;
 	month: number;
 	day: number;
+// eslint-disable-next-line semi
 }

@@ -4,7 +4,7 @@
  */
 
 import { expect } from 'chai';
-import * as howMany from '../dist/howMany';
+import { howMany } from '../dist/cjs/date-time';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -97,7 +97,7 @@ describe('howMany (dist integration)', () => {
 			
 			try {
 				// Dynamic import should work without throwing
-				const importedModule = await import('../dist/howMany');
+				const importedModule = await import('../dist/cjs/howMany');
 				expect(importedModule).to.be.an('object');
 				expect(importedModule.hours).to.be.an('object');
 				expect(importedModule.ticks).to.be.an('object');
@@ -110,7 +110,7 @@ describe('howMany (dist integration)', () => {
 			// Verify that both declaration and implementation files exist
 			// This prevents the original issue from recurring
 			const distPath = path.resolve(__dirname, '../dist');
-			const jsFile = path.join(distPath, 'howMany.js');
+			const jsFile = path.join(distPath, 'cjs', 'howMany.js');
 			const dtsFile = path.join(distPath, 'howMany.d.ts');
 			
 			expect(fs.existsSync(jsFile)).to.be.true;

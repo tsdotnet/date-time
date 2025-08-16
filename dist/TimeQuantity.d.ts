@@ -2,8 +2,8 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import ResettableLazy from '@tsdotnet/lazy/dist/ResettableLazy';
-import TimeMeasurement from './TimeMeasurement';
+import { ResettableLazy } from '@tsdotnet/lazy';
+import type TimeMeasurement from './TimeMeasurement';
 import TimeUnit from './TimeUnit';
 /**
  * This class provides a simple means for storing and calculating time quantities.

@@ -7,4 +7,5 @@
 export default interface JsDateConvertible
 {
 	toJsDate (): Date;
+// eslint-disable-next-line semi
 }

@@ -10,4 +10,5 @@ export default interface TimeStampValue
 	extends CalendarDate, Partial<ClockTimeValue>
 {
 
+// eslint-disable-next-line semi
 }

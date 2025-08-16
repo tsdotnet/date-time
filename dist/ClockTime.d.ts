@@ -2,7 +2,7 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import ClockTimeValue from './ClockTimeValue';
+import type ClockTimeValue from './ClockTimeValue';
 import TimeQuantity from './TimeQuantity';
 export declare class ClockTime extends TimeQuantity implements Required<ClockTimeValue> {
     readonly day: number;

@@ -3,7 +3,7 @@
  * @license MIT
  */
 
-import ClockTimeValue from './ClockTimeValue';
+import type ClockTimeValue from './ClockTimeValue';
 import * as howMany from './howMany';
 import TimeQuantity from './TimeQuantity';
 import msPer = howMany.milliseconds.per;

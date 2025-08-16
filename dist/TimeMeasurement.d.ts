@@ -12,4 +12,5 @@ export default interface TimeMeasurement
 	minutes: number;
 	hours: number;
 	days: number;
+// eslint-disable-next-line semi
 }

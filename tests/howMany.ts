@@ -52,7 +52,7 @@ describe('howMany', () => {
 		it('should work when imported from compiled JavaScript', async () => {
 			// This test ensures that the howMany module can be imported and used
 			// from JavaScript after compilation, which was the original issue
-			const howManyModule = await import('../dist/howMany.js');
+			const howManyModule = await import('../dist/cjs/howMany.js');
 			
 			// Test that the module exports are accessible
 			expect(howManyModule.hours).to.be.an('object');
