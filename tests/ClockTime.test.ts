@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import ClockTime from '../src/ClockTime.js';
-import { milliseconds } from '../src/howMany.js';
+import { milliseconds } from '../src/howManyConstEnums.js';
 
 // Use fixed values instead of random for predictable tests
 const

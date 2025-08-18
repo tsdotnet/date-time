@@ -4,7 +4,7 @@
  */
 
 import type ClockTimeValue from './ClockTimeValue';
-import * as howMany from './howMany';
+import * as howMany from './howManyConstEnums';
 import TimeQuantity from './TimeQuantity';
 import msPer = howMany.milliseconds.per;
 

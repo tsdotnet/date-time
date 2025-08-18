@@ -4,7 +4,7 @@
  * @license MIT
  */
 import CalendarDate from './CalendarDate';
-import Gregorian from './Calendars/Gregorian';
+import * as Gregorian from './Calendars/Gregorian';
 import ClockTime from './ClockTime';
 import DateTimeKind from './DateTimeKind';
 import type JsDateConvertible from './JsDateConvertible';

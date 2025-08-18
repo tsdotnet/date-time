@@ -6,7 +6,7 @@
 import {areEqual, compare} from '@tsdotnet/compare';
 import {ArgumentNullException} from '@tsdotnet/exceptions';
 import {ResettableLazy} from '@tsdotnet/lazy';
-import {milliseconds, ticks} from './howMany';
+import {milliseconds, ticks} from './howManyConstEnums';
 import type TimeMeasurement from './TimeMeasurement';
 import TimeUnit from './TimeUnit';
 

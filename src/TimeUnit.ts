@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-import {hours, milliseconds, minutes, seconds, ticks} from './howMany';
+import {hours, milliseconds, minutes, seconds, ticks} from './howManyConstEnums';
 import TimeQuantity from './TimeQuantity';
 
 

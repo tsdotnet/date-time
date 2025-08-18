@@ -6,10 +6,10 @@
 
 import {ArgumentNullException} from '@tsdotnet/exceptions';
 import CalendarDate from './CalendarDate';
-import Gregorian from './Calendars/Gregorian';
+import * as Gregorian from './Calendars/Gregorian';
 import ClockTime from './ClockTime';
 import DateTimeKind from './DateTimeKind';
-import {milliseconds} from './howMany';
+import {milliseconds} from './howManyConstEnums';
 import type JsDateConvertible from './JsDateConvertible';
 import TimeQuantity from './TimeQuantity';
 import TimeSpan from './TimeSpan';

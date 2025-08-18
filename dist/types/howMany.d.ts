@@ -1,39 +1,36 @@
-/*!
- * @author electricessence / https://github.com/electricessence/
- * @license MIT
- */
+import * as howMany from './howManyConstEnums';
 export declare namespace hours {
-    const enum per {
-        day = 24
-    }
+    const per: Readonly<{
+        day: howMany.hours.per;
+    }>;
 }
 export declare namespace minutes {
-    const enum per {
-        hour = 60,
-        day = 1440
-    }
+    const per: Readonly<{
+        hour: howMany.minutes.per.hour;
+        day: howMany.minutes.per.day;
+    }>;
 }
 export declare namespace seconds {
-    const enum per {
-        minute = 60,
-        hour = 3600,
-        day = 86400
-    }
+    const per: Readonly<{
+        minute: howMany.seconds.per.minute;
+        hour: howMany.seconds.per.hour;
+        day: howMany.seconds.per.day;
+    }>;
 }
 export declare namespace milliseconds {
-    const enum per {
-        second = 1000,
-        minute = 60000,
-        hour = 3600000,
-        day = 86400000
-    }
+    const per: Readonly<{
+        second: howMany.milliseconds.per.second;
+        minute: howMany.milliseconds.per.minute;
+        hour: howMany.milliseconds.per.hour;
+        day: howMany.milliseconds.per.day;
+    }>;
 }
 export declare namespace ticks {
-    const enum per {
-        millisecond = 10000,
-        second = 10000000,
-        minute = 600000000,
-        hour = 36000000000,
-        day = 864000000000
-    }
+    const per: Readonly<{
+        millisecond: howMany.ticks.per.millisecond;
+        second: howMany.ticks.per.second;
+        minute: howMany.ticks.per.minute;
+        hour: howMany.ticks.per.hour;
+        day: howMany.ticks.per.day;
+    }>;
 }

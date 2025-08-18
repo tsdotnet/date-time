@@ -4,8 +4,8 @@
  */
 
 import type from '@tsdotnet/type';
-import Gregorian from './Calendars/Gregorian';
-import {ticks} from './howMany';
+import * as Gregorian from './Calendars/Gregorian';
+import {ticks} from './howManyConstEnums';
 import JsDateConvertible from './JsDateConvertible';
 import TimeStampValue from './TimeStampValue';
 

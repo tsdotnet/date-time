@@ -2,7 +2,7 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import Gregorian from './Calendars/Gregorian';
+import * as Gregorian from './Calendars/Gregorian';
 import JsDateConvertible from './JsDateConvertible';
 import TimeStampValue from './TimeStampValue';
 export declare class TimeStamp implements Required<TimeStampValue>, JsDateConvertible {

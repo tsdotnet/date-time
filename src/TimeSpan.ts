@@ -7,7 +7,7 @@
 import Lazy from '@tsdotnet/lazy';
 import type from '@tsdotnet/type';
 import ClockTime from './ClockTime';
-import {milliseconds, ticks} from './howMany';
+import {milliseconds, ticks} from './howManyConstEnums';
 import TimeMeasurement from './TimeMeasurement';
 import TimeQuantity from './TimeQuantity';
 import TimeUnit from './TimeUnit';

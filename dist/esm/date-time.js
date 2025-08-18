@@ -1,7 +1,10 @@
+import * as Gregorian from './Calendars/Gregorian.js';
+export { Gregorian };
 export { ClockTime } from './ClockTime.js';
 export { default as DateTime } from './DateTime.js';
-import * as howMany from './howMany.js';
-export { howMany };
+export { default as DateTimeKind } from './DateTimeKind.js';
+import * as howManyConstEnums from './howManyConstEnums.js';
+export { howManyConstEnums as howMany };
 export { default as TimeQuantity } from './TimeQuantity.js';
 export { TimeSpan } from './TimeSpan.js';
 export { TimeStamp } from './TimeStamp.js';

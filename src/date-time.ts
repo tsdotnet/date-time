@@ -3,13 +3,13 @@
  * @license MIT
  */
 
-import Gregorian from './Calendars/Gregorian';
+import * as Gregorian from './Calendars/Gregorian';
 import type CalendarDate from './CalendarDate';
 import ClockTime from './ClockTime';
 import type ClockTimeValue from './ClockTimeValue';
 import DateTime from './DateTime';
 import DateTimeKind from './DateTimeKind';
-import * as howMany from './howMany';
+import * as howMany from './howManyConstEnums';
 import type TimeMeasurement from './TimeMeasurement';
 import TimeQuantity from './TimeQuantity';
 import TimeSpan from './TimeSpan';
