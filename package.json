@@ -7,7 +7,7 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/date-time.d.ts",
+      "types": "./dist/types/date-time.d.ts",
       "import": "./dist/esm/date-time.js",
       "require": "./dist/cjs/date-time.js"
     }
