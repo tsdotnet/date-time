@@ -7,9 +7,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const TimeQuantity_1 = tslib_1.__importDefault(require("./TimeQuantity"));
 const TimeUnit_1 = tslib_1.__importDefault(require("./TimeUnit"));
-/**
- * TimeUnitValue allows for passing around a reference to a mutable measure of time coerced by its unit type.
- */
 class TimeUnitValue extends TimeQuantity_1.default {
     constructor(value, _units) {
         super(typeof value == 'number'
@@ -26,7 +23,6 @@ class TimeUnitValue extends TimeQuantity_1.default {
         if (!this._total.tryReset())
             throw new Error('Unable to update underlying value.');
     }
-    // To avoid confusion, the unit type can only be set once at construction.
     get units() {
         return this._units;
     }

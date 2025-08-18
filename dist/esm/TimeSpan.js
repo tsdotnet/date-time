@@ -1,73 +1,42 @@
+import Lazy from '@tsdotnet/lazy';
+import type from '@tsdotnet/type';
+import { ClockTime } from './ClockTime.js';
+import TimeQuantity from './TimeQuantity.js';
+import TimeUnit from './TimeUnit.js';
+
 /*!
  * @author electricessence / https://github.com/electricessence/
  * Originally based upon .NET source but with many additions and improvements.
  * @license MIT
  */
-import Lazy from '@tsdotnet/lazy';
-import type from '@tsdotnet/type';
-import ClockTime from './ClockTime';
-import { milliseconds, ticks } from './howMany';
-import TimeQuantity from './TimeQuantity';
-import TimeUnit from './TimeUnit';
-/**
- * TimeSpan expands on TimeQuantity to provide an class that is similar to .NET's TimeSpan including many useful static methods.
- */
-export class TimeSpan extends TimeQuantity {
-    /**
-     * The total number of ticks that represent this amount of time.
-     */
+class TimeSpan extends TimeQuantity {
     ticks;
-    /**
-     * The total number of ticks that milliseconds this amount of time.
-     */
     milliseconds;
-    /**
-     * The total number of ticks that seconds this amount of time.
-     */
     seconds;
-    /**
-     * The total number of ticks that minutes this amount of time.
-     */
     minutes;
-    /**
-     * The total number of ticks that hours this amount of time.
-     */
     hours;
-    /**
-     * The total number of ticks that days this amount of time.
-     */
     days;
-    // In .NET the default type is Ticks, but for JavaScript, we will use Milliseconds.
     constructor(value, units = TimeUnit.UnitType.Milliseconds) {
         if (isNaN(value))
             throw Error('Cannot construct a TimeSpan from NaN value.');
         const ms = TimeUnit.toMilliseconds(value, units);
         super(ms);
-        this.ticks = ms * ticks.per.millisecond;
+        this.ticks = ms * 10000;
         this.milliseconds = ms;
-        this.seconds = ms / milliseconds.per.second;
-        this.minutes = ms / milliseconds.per.minute;
-        this.hours = ms / milliseconds.per.hour;
-        this.days = ms / milliseconds.per.day;
+        this.seconds = ms / 1000;
+        this.minutes = ms / 60000;
+        this.hours = ms / 3600000;
+        this.days = ms / 86400000;
         this._time = Lazy.create(() => new ClockTime(this.getTotalMilliseconds()));
         Object.freeze(this);
     }
     static get zero() {
         return timeSpanZero || (timeSpanZero = new TimeSpan(0));
     }
-    /**
-     * Provides an standard interface for acquiring the total time.
-     * @returns {TimeSpan}
-     */
     get total() {
         return this;
     }
     _time;
-    // Instead of the confusing getTotal versus unit name, expose a 'ClockTime' value which reports the individual components.
-    /**
-     * The value of this TimeSpan reduced to the clock and calendar.
-     * @return {ClockTime}
-     */
     get time() {
         return this._time.value;
     }
@@ -100,11 +69,6 @@ export class TimeSpan extends TimeQuantity {
     static fromTicks(value) {
         return value ? new TimeSpan(value, TimeUnit.UnitType.Ticks) : TimeSpan.zero;
     }
-    /**
-     * Sum the value of this TimeSpan with another time quantity.
-     * @param {TimeQuantity | Partial<TimeMeasurement>} other
-     * @return {TimeSpan}
-     */
     add(other) {
         if (!other)
             return this;
@@ -116,12 +80,6 @@ export class TimeSpan extends TimeQuantity {
             : TimeQuantity.getTotalMillisecondsFrom(other);
         return new TimeSpan(this.getTotalMilliseconds() + otherMs);
     }
-    /**
-     * Sum the value of this TimeSpan with another unit value.
-     * @param {number} value
-     * @param {TimeUnit.UnitType} units
-     * @return {TimeSpan}
-     */
     addUnit(value, units = TimeUnit.UnitType.Milliseconds) {
         return value
             ? new TimeSpan(this.getTotalMilliseconds() + TimeUnit.toMilliseconds(value, units))
@@ -129,5 +87,6 @@ export class TimeSpan extends TimeQuantity {
     }
 }
 let timeSpanZero;
-export default TimeSpan;
+
+export { TimeSpan, TimeSpan as default };
 //# sourceMappingURL=TimeSpan.js.map

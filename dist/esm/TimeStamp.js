@@ -1,13 +1,10 @@
+import type from '@tsdotnet/type';
+
 /*!
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import type from '@tsdotnet/type';
-import { ticks } from './howMany';
-/**
- * An alternative to Date or DateTime.  Is a model representing the exact date and time.
- */
-export class TimeStamp {
+class TimeStamp {
     year;
     month;
     day;
@@ -17,7 +14,6 @@ export class TimeStamp {
     millisecond;
     tick;
     constructor(year, month, day = 1, hour = 0, minute = 0, second = 0, millisecond = 0, tick = 0) {
-        // Add validation or properly carry out of range values?
         this.year = year;
         this.month = month;
         this.day = day;
@@ -43,8 +39,9 @@ export class TimeStamp {
     }
     toJsDate() {
         const _ = this;
-        return new Date(_.year, _.month, _.day, _.hour, _.minute, _.second, _.millisecond + _.tick / ticks.per.millisecond);
+        return new Date(_.year, _.month, _.day, _.hour, _.minute, _.second, _.millisecond + _.tick / 10000);
     }
 }
-export default TimeStamp;
+
+export { TimeStamp, TimeStamp as default };
 //# sourceMappingURL=TimeStamp.js.map

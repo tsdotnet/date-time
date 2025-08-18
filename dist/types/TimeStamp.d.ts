@@ -5,9 +5,6 @@
 import Gregorian from './Calendars/Gregorian';
 import JsDateConvertible from './JsDateConvertible';
 import TimeStampValue from './TimeStampValue';
-/**
- * An alternative to Date or DateTime.  Is a model representing the exact date and time.
- */
 export declare class TimeStamp implements Required<TimeStampValue>, JsDateConvertible {
     readonly year: number;
     readonly month: Gregorian.Month;

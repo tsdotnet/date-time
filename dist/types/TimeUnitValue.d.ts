@@ -4,9 +4,6 @@
  */
 import TimeQuantity from './TimeQuantity';
 import TimeUnit from './TimeUnit';
-/**
- * TimeUnitValue allows for passing around a reference to a mutable measure of time coerced by its unit type.
- */
 export default class TimeUnitValue extends TimeQuantity {
     private _units;
     constructor(value: number | TimeQuantity, _units: TimeUnit.UnitType);

@@ -3,7 +3,7 @@
  * @license MIT
  */
 
-namespace Gregorian
+declare namespace Gregorian
 {
 	export const enum Month
 	{

@@ -1,14 +1,10 @@
-/*!
- * @author electricessence / https://github.com/electricessence/
- * @license MIT
- */
-import ClockTime from './ClockTime';
-import DateTime from './DateTime';
-import * as howMany from './howMany';
-import TimeQuantity from './TimeQuantity';
-import TimeSpan from './TimeSpan';
-import TimeStamp from './TimeStamp';
-import TimeUnit from './TimeUnit';
-import TimeUnitValue from './TimeUnitValue';
-export { ClockTime, DateTime, howMany, TimeQuantity, TimeSpan, TimeStamp, TimeUnit, TimeUnitValue };
+export { ClockTime } from './ClockTime.js';
+export { default as DateTime } from './DateTime.js';
+import * as howMany from './howMany.js';
+export { howMany };
+export { default as TimeQuantity } from './TimeQuantity.js';
+export { TimeSpan } from './TimeSpan.js';
+export { TimeStamp } from './TimeStamp.js';
+export { default as TimeUnit } from './TimeUnit.js';
+export { default as TimeUnitValue } from './TimeUnitValue.js';
 //# sourceMappingURL=date-time.js.map

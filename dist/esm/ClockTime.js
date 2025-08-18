@@ -1,11 +1,10 @@
+import TimeQuantity from './TimeQuantity.js';
+
 /*!
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import * as howMany from './howMany';
-import TimeQuantity from './TimeQuantity';
-var msPer = howMany.milliseconds.per;
-export class ClockTime extends TimeQuantity {
+class ClockTime extends TimeQuantity {
     day;
     hour;
     minute;
@@ -18,34 +17,32 @@ export class ClockTime extends TimeQuantity {
             : (args.length > 0 && args[0] || 0));
         const ms = Math.abs(this.getTotalMilliseconds());
         let msi = Math.floor(ms);
-        this.tick = (ms - msi) * howMany.ticks.per.millisecond;
-        this.day = (msi / msPer.day) | 0;
-        msi -= this.day * howMany.milliseconds.per.day;
-        this.hour = (msi / msPer.hour) | 0;
-        msi -= this.hour * msPer.hour;
-        this.minute = (msi / msPer.minute) | 0;
-        msi -= this.minute * msPer.minute;
-        this.second = (msi / msPer.second) | 0;
-        msi -= this.second * msPer.second;
+        this.tick = (ms - msi) * 10000;
+        this.day = (msi / 86400000) | 0;
+        msi -= this.day * 86400000;
+        this.hour = (msi / 3600000) | 0;
+        msi -= this.hour * 3600000;
+        this.minute = (msi / 60000) | 0;
+        msi -= this.minute * 60000;
+        this.second = (msi / 1000) | 0;
+        msi -= this.second * 1000;
         this.millisecond = msi;
         Object.freeze(this);
     }
-    // Static version for relative consistency.  Constructor does allow this format.
     static from(hours, minutes, seconds = 0, milliseconds = 0) {
         return new ClockTime(hours, minutes, seconds, milliseconds);
     }
     static millisecondsFromTime(hours, minutes, seconds = 0, milliseconds = 0) {
         let value = hours;
-        value *= howMany.minutes.per.hour;
+        value *= 60;
         value += minutes;
-        value *= howMany.seconds.per.minute;
+        value *= 60;
         value += seconds;
-        value *= howMany.milliseconds.per.second;
+        value *= 1000;
         value += milliseconds;
         return value;
     }
-    toString( /*format?:string, formatProvider?:IFormatProvider*/) {
-        /* INSERT CUSTOM FORMATTING CODE HERE */
+    toString() {
         const _ = this;
         const a = [];
         if (_.day)
@@ -61,11 +58,11 @@ export class ClockTime extends TimeQuantity {
         return a.join(', ').replace(', and, ', ' and ');
     }
 }
-// Temporary until the full TimeSpanFormat is available.
 function pluralize(value, label) {
     if (Math.abs(value) !== 1)
         label += 's';
     return label;
 }
-export default ClockTime;
+
+export { ClockTime, ClockTime as default };
 //# sourceMappingURL=ClockTime.js.map

@@ -7,13 +7,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TimeStamp = void 0;
 const tslib_1 = require("tslib");
 const type_1 = tslib_1.__importDefault(require("@tsdotnet/type"));
-const howMany_1 = require("./howMany");
-/**
- * An alternative to Date or DateTime.  Is a model representing the exact date and time.
- */
 class TimeStamp {
     constructor(year, month, day = 1, hour = 0, minute = 0, second = 0, millisecond = 0, tick = 0) {
-        // Add validation or properly carry out of range values?
         this.year = year;
         this.month = month;
         this.day = day;
@@ -39,7 +34,7 @@ class TimeStamp {
     }
     toJsDate() {
         const _ = this;
-        return new Date(_.year, _.month, _.day, _.hour, _.minute, _.second, _.millisecond + _.tick / howMany_1.ticks.per.millisecond);
+        return new Date(_.year, _.month, _.day, _.hour, _.minute, _.second, _.millisecond + _.tick / 10000);
     }
 }
 exports.TimeStamp = TimeStamp;

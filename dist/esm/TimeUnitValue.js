@@ -1,13 +1,11 @@
+import TimeQuantity from './TimeQuantity.js';
+import TimeUnit from './TimeUnit.js';
+
 /*!
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import TimeQuantity from './TimeQuantity';
-import TimeUnit from './TimeUnit';
-/**
- * TimeUnitValue allows for passing around a reference to a mutable measure of time coerced by its unit type.
- */
-export default class TimeUnitValue extends TimeQuantity {
+class TimeUnitValue extends TimeQuantity {
     _units;
     constructor(value, _units) {
         super(typeof value == 'number'
@@ -24,7 +22,6 @@ export default class TimeUnitValue extends TimeQuantity {
         if (!this._total.tryReset())
             throw new Error('Unable to update underlying value.');
     }
-    // To avoid confusion, the unit type can only be set once at construction.
     get units() {
         return this._units;
     }
@@ -41,4 +38,6 @@ export default class TimeUnitValue extends TimeQuantity {
 function getUnitQuantityFrom(q, units) {
     return TimeUnit.fromMilliseconds(q.getTotalMilliseconds(), units);
 }
+
+export { TimeUnitValue as default };
 //# sourceMappingURL=TimeUnitValue.js.map

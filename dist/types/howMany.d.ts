@@ -3,25 +3,25 @@
  * @license MIT
  */
 export declare namespace hours {
-    enum per {
+    const enum per {
         day = 24
     }
 }
 export declare namespace minutes {
-    enum per {
+    const enum per {
         hour = 60,
         day = 1440
     }
 }
 export declare namespace seconds {
-    enum per {
+    const enum per {
         minute = 60,
         hour = 3600,
         day = 86400
     }
 }
 export declare namespace milliseconds {
-    enum per {
+    const enum per {
         second = 1000,
         minute = 60000,
         hour = 3600000,
@@ -29,7 +29,7 @@ export declare namespace milliseconds {
     }
 }
 export declare namespace ticks {
-    enum per {
+    const enum per {
         millisecond = 10000,
         second = 10000000,
         minute = 600000000,
