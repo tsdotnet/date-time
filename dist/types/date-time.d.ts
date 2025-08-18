@@ -8,7 +8,7 @@ import ClockTime from './ClockTime';
 import type ClockTimeValue from './ClockTimeValue';
 import DateTime from './DateTime';
 import DateTimeKind from './DateTimeKind';
-import * as howMany from './howManyConstEnums';
+import * as howMany from './howMany';
 import type TimeMeasurement from './TimeMeasurement';
 import TimeQuantity from './TimeQuantity';
 import TimeSpan from './TimeSpan';
