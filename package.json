@@ -62,7 +62,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@tsdotnet/compare": "^1.6.1",
+    "@tsdotnet/compare": "^1.7.0",
     "@tsdotnet/exceptions": "^1.2.4",
     "@tsdotnet/lazy": "^1.1.2",
     "@tsdotnet/type": "^1.2.4",
