@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import TimeSpan from '../src/TimeSpan';
 import TimeUnit from '../src/TimeUnit';
 import ClockTime from '../src/ClockTime';
+import TimeQuantity from '../src/TimeQuantity';
 
 describe('TimeSpan', () => {
 	describe('constructor and basic properties', () => {
@@ -23,6 +24,21 @@ describe('TimeSpan', () => {
 			// The NaN check might be in the factory methods, not constructor
 			const ts = TimeSpan.fromMilliseconds(NaN);
 			expect(ts.milliseconds).toBe(0); // May return zero instead of throwing
+		});
+
+		it('should return zero for NaN values in static from method', () => {
+			// NaN is falsy, so from method returns zero instead of throwing
+			const ts = TimeSpan.from(NaN, TimeUnit.UnitType.Milliseconds);
+			expect(ts).toBe(TimeSpan.zero);
+			expect(ts.milliseconds).toBe(0);
+		});
+
+		it('should handle NaN through TimeUnit conversion edge case', () => {
+			// Test a case where a non-falsy value might result in NaN after unit conversion
+			// This would trigger the constructor's NaN check if such a case exists
+			// For now, testing that large numbers work correctly
+			const ts = TimeSpan.from(1e20, TimeUnit.UnitType.Milliseconds);
+			expect(ts.milliseconds).toBe(1e20);
 		});
 
 		it('should be frozen after construction', () => {
@@ -186,6 +202,35 @@ describe('TimeSpan', () => {
 		it('should throw error when adding numbers directly', () => {
 			const ts = TimeSpan.fromHours(1);
 			expect(() => ts.add(1000 as any)).toThrow('Use .addUnit(value:number, units:TimeUnit) to add a numerical value amount');
+		});
+
+		it('should add ClockTime (TimeQuantity subclass)', () => {
+			const ts = TimeSpan.fromHours(1);
+			const clockTime = new ClockTime(1800000); // 30 minutes in milliseconds
+			const result = ts.add(clockTime);
+			
+			expect(result.hours).toBe(1.5);
+			expect(result.minutes).toBe(90);
+		});
+
+		it('should add TimeQuantity instance directly', () => {
+			const ts = TimeSpan.fromMinutes(30);
+			const timeQuantity = new TimeQuantity(900000); // 15 minutes in milliseconds
+			const result = ts.add(timeQuantity);
+			
+			expect(result.minutes).toBe(45);
+			expect(result.milliseconds).toBe(2700000);
+		});
+
+		it('should handle zero TimeQuantity addition', () => {
+			const ts = TimeSpan.fromHours(1);
+			const zeroTimeQuantity = new TimeQuantity(0);
+			const result = ts.add(zeroTimeQuantity);
+			
+			// Check that the values are the same, not object identity
+			expect(result.milliseconds).toBe(ts.milliseconds);
+			expect(result.hours).toBe(ts.hours);
+			expect(result.minutes).toBe(ts.minutes);
 		});
 	});
 
