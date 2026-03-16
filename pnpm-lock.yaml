@@ -32,8 +32,8 @@ importers:
         specifier: ^1.2.9
         version: 1.2.9
       '@tsdotnet/lazy':
-        specifier: ^2.0.2
-        version: 2.0.2
+        specifier: ^2.0.3
+        version: 2.0.3
       '@tsdotnet/type':
         specifier: ^1.2.8
         version: 1.2.8
@@ -699,8 +699,8 @@ packages:
   '@tsdotnet/exceptions@1.2.9':
     resolution: {integrity: sha512-Gd0BnH5VjU38gpJSZF0Dt0uqEk118bFHEWjtquY4FTJ/bac5kRHr+kLdh4Eo56h3iED9qFtWWiPDbl0XqpgTOg==}
 
-  '@tsdotnet/lazy@2.0.2':
-    resolution: {integrity: sha512-IKPw4Su15sW8yhcb3qMGrvuItGIW3UF/Lfk6X92frDPvjIauZKkEE8YZ0qidZF2/dQi5dSJI5B8a0gx+vP6/Xw==}
+  '@tsdotnet/lazy@2.0.3':
+    resolution: {integrity: sha512-x2hR7SdYamtuJtiKcFghhhvtxPbCsMHBSuqP0qDC7HyZqL4K8ykYTxeV9YMeyCz/M9gSoLGtARGwA3XoB+kqDQ==}
 
   '@tsdotnet/type@1.2.8':
     resolution: {integrity: sha512-e0elKu4ien84aR8O+PO/JibiAC6kxvNg32adNMO7hMck/pVKXTP8gs31B9R6P72W9W2iHWMeaphVX5zJFF7ctA==}
@@ -1908,7 +1908,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@tsdotnet/lazy@2.0.2':
+  '@tsdotnet/lazy@2.0.3':
     dependencies:
       '@tsdotnet/disposable': 2.0.3
       tslib: 2.8.1
