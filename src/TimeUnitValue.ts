@@ -3,8 +3,8 @@
  * @license MIT
  */
 
-import TimeQuantity from './TimeQuantity';
-import TimeUnit from './TimeUnit';
+import TimeQuantity from './TimeQuantity.js';
+import TimeUnit from './TimeUnit.js';
 
 /**
  * TimeUnitValue allows for passing around a reference to a mutable measure of time coerced by its unit type.

@@ -2,7 +2,7 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import * as howMany from './howManyConstEnums';
+import * as howMany from './howManyConstEnums.js';
 
 export namespace hours
 {

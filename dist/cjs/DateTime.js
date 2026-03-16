@@ -7,9 +7,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const exceptions_1 = require("@tsdotnet/exceptions");
-const ClockTime_1 = tslib_1.__importDefault(require("./ClockTime"));
-const TimeSpan_1 = tslib_1.__importDefault(require("./TimeSpan"));
-const TimeStamp_1 = tslib_1.__importDefault(require("./TimeStamp"));
+const ClockTime_js_1 = tslib_1.__importDefault(require("./ClockTime.js"));
+const TimeSpan_js_1 = tslib_1.__importDefault(require("./TimeSpan.js"));
+const TimeStamp_js_1 = tslib_1.__importDefault(require("./TimeStamp.js"));
 const VOID0 = void 0;
 class DateTime {
     constructor(value = new Date(), kind = 1) {
@@ -75,13 +75,13 @@ class DateTime {
         let t = _._time;
         if (!t) {
             const d = this._value;
-            _._time = t = new ClockTime_1.default(d.getHours(), d.getMinutes(), d.getSeconds(), d.getMilliseconds());
+            _._time = t = new ClockTime_js_1.default(d.getHours(), d.getMinutes(), d.getSeconds(), d.getMilliseconds());
         }
         return t;
     }
     static between(first, last) {
         const f = first instanceof DateTime ? first._value : first, l = last instanceof DateTime ? last._value : last;
-        return TimeSpan_1.default.fromMilliseconds(l.getTime() - f.getTime());
+        return TimeSpan_js_1.default.fromMilliseconds(l.getTime() - f.getTime());
     }
     static isLeapYear(year) {
         return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
@@ -158,7 +158,7 @@ class DateTime {
         return DateTime.between(previous, this);
     }
     toTimeStamp() {
-        return TimeStamp_1.default.from(this);
+        return TimeStamp_js_1.default.from(this);
     }
     toUniversalTime() {
         const _ = this;

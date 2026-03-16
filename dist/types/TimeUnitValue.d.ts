@@ -2,8 +2,8 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import TimeQuantity from './TimeQuantity';
-import TimeUnit from './TimeUnit';
+import TimeQuantity from './TimeQuantity.js';
+import TimeUnit from './TimeUnit.js';
 export default class TimeUnitValue extends TimeQuantity {
     private _units;
     constructor(value: number | TimeQuantity, _units: TimeUnit.UnitType);

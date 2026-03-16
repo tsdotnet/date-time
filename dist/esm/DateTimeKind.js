@@ -8,7 +8,7 @@ var DateTimeKind;
     DateTimeKind[DateTimeKind["Local"] = 1] = "Local";
     DateTimeKind[DateTimeKind["Utc"] = 2] = "Utc";
 })(DateTimeKind || (DateTimeKind = {}));
-var DateTimeKind$1 = DateTimeKind;
+var DateTimeKind_default = DateTimeKind;
 
-export { DateTimeKind$1 as default };
+export { DateTimeKind_default as default };
 //# sourceMappingURL=DateTimeKind.js.map

@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import TimeUnitValue from '../src/TimeUnitValue';
-import TimeQuantity from '../src/TimeQuantity';
-import TimeUnit from '../src/TimeUnit';
+import TimeUnitValue from '../src/TimeUnitValue.js';
+import TimeQuantity from '../src/TimeQuantity.js';
+import TimeUnit from '../src/TimeUnit.js';
 
 describe('TimeUnitValue', () => {
 	describe('constructor', () => {

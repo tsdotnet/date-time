@@ -3,14 +3,14 @@
  * Based on .NET DateTime's interface.
  * @license MIT
  */
-import CalendarDate from './CalendarDate';
-import * as Gregorian from './Calendars/Gregorian';
-import ClockTime from './ClockTime';
-import DateTimeKind from './DateTimeKind';
-import type JsDateConvertible from './JsDateConvertible';
-import TimeQuantity from './TimeQuantity';
-import TimeSpan from './TimeSpan';
-import TimeStamp from './TimeStamp';
+import CalendarDate from './CalendarDate.js';
+import * as Gregorian from './Calendars/Gregorian.js';
+import ClockTime from './ClockTime.js';
+import DateTimeKind from './DateTimeKind.js';
+import type JsDateConvertible from './JsDateConvertible.js';
+import TimeQuantity from './TimeQuantity.js';
+import TimeSpan from './TimeSpan.js';
+import TimeStamp from './TimeStamp.js';
 export default class DateTime implements CalendarDate, JsDateConvertible {
     private readonly _value;
     private readonly _kind;

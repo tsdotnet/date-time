@@ -5,15 +5,15 @@
  */
 
 import {ArgumentNullException} from '@tsdotnet/exceptions';
-import CalendarDate from './CalendarDate';
-import * as Gregorian from './Calendars/Gregorian';
-import ClockTime from './ClockTime';
-import DateTimeKind from './DateTimeKind';
-import {milliseconds} from './howManyConstEnums';
-import type JsDateConvertible from './JsDateConvertible';
-import TimeQuantity from './TimeQuantity';
-import TimeSpan from './TimeSpan';
-import TimeStamp from './TimeStamp';
+import CalendarDate from './CalendarDate.js';
+import * as Gregorian from './Calendars/Gregorian.js';
+import ClockTime from './ClockTime.js';
+import DateTimeKind from './DateTimeKind.js';
+import {milliseconds} from './howManyConstEnums.js';
+import type JsDateConvertible from './JsDateConvertible.js';
+import TimeQuantity from './TimeQuantity.js';
+import TimeSpan from './TimeSpan.js';
+import TimeStamp from './TimeStamp.js';
 
 const VOID0: undefined = void 0;
 

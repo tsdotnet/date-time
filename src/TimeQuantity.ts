@@ -6,9 +6,9 @@
 import {areEqual, compare} from '@tsdotnet/compare';
 import {ArgumentNullException} from '@tsdotnet/exceptions';
 import {ResettableLazy} from '@tsdotnet/lazy';
-import {milliseconds, ticks} from './howManyConstEnums';
-import type TimeMeasurement from './TimeMeasurement';
-import TimeUnit from './TimeUnit';
+import {milliseconds, ticks} from './howManyConstEnums.js';
+import type TimeMeasurement from './TimeMeasurement.js';
+import TimeUnit from './TimeUnit.js';
 
 /**
  * This class provides a simple means for storing and calculating time quantities.

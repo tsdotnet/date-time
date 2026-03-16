@@ -4,8 +4,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import * as howMany from "../src/howMany";
-import * as howManyConstEnums from "../src/howManyConstEnums";
+import * as howMany from "../src/howMany.js";
+import * as howManyConstEnums from "../src/howManyConstEnums.js";
 
 describe('howMany', () => {
 	

@@ -2,9 +2,9 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import * as Gregorian from './Calendars/Gregorian';
-import JsDateConvertible from './JsDateConvertible';
-import TimeStampValue from './TimeStampValue';
+import * as Gregorian from './Calendars/Gregorian.js';
+import JsDateConvertible from './JsDateConvertible.js';
+import TimeStampValue from './TimeStampValue.js';
 export declare class TimeStamp implements Required<TimeStampValue>, JsDateConvertible {
     readonly year: number;
     readonly month: Gregorian.Month;

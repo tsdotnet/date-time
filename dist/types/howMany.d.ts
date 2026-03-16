@@ -1,4 +1,4 @@
-import * as howMany from './howManyConstEnums';
+import * as howMany from './howManyConstEnums.js';
 export declare namespace hours {
     const per: Readonly<{
         day: howMany.hours.per;

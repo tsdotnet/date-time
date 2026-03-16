@@ -3,9 +3,9 @@
  * @license MIT
  */
 
-import type ClockTimeValue from './ClockTimeValue';
-import * as howMany from './howManyConstEnums';
-import TimeQuantity from './TimeQuantity';
+import type ClockTimeValue from './ClockTimeValue.js';
+import * as howMany from './howManyConstEnums.js';
+import TimeQuantity from './TimeQuantity.js';
 import msPer = howMany.milliseconds.per;
 
 export class ClockTime

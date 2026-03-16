@@ -6,8 +6,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ClockTime = void 0;
 const tslib_1 = require("tslib");
-const TimeQuantity_1 = tslib_1.__importDefault(require("./TimeQuantity"));
-class ClockTime extends TimeQuantity_1.default {
+const TimeQuantity_js_1 = tslib_1.__importDefault(require("./TimeQuantity.js"));
+class ClockTime extends TimeQuantity_js_1.default {
     constructor(...args) {
         super(args.length > 1
             ? ClockTime.millisecondsFromTime(args[0] || 0, args[1] || 0, args.length > 2 && args[2] || 0, args.length > 3 && args[3] || 0)

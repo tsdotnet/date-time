@@ -3,8 +3,8 @@
  * @license MIT
  */
 import { ResettableLazy } from '@tsdotnet/lazy';
-import type TimeMeasurement from './TimeMeasurement';
-import TimeUnit from './TimeUnit';
+import type TimeMeasurement from './TimeMeasurement.js';
+import TimeUnit from './TimeUnit.js';
 export default class TimeQuantity {
     protected _quantity: number;
     constructor(_quantity?: number);

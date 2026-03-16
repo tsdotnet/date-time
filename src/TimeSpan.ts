@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * @author electricessence / https://github.com/electricessence/
  * Originally based upon .NET source but with many additions and improvements.
  * @license MIT
@@ -6,11 +6,11 @@
 
 import Lazy from '@tsdotnet/lazy';
 import type from '@tsdotnet/type';
-import ClockTime from './ClockTime';
-import {milliseconds, ticks} from './howManyConstEnums';
-import TimeMeasurement from './TimeMeasurement';
-import TimeQuantity from './TimeQuantity';
-import TimeUnit from './TimeUnit';
+import ClockTime from './ClockTime.js';
+import {milliseconds, ticks} from './howManyConstEnums.js';
+import TimeMeasurement from './TimeMeasurement.js';
+import TimeQuantity from './TimeQuantity.js';
+import TimeUnit from './TimeUnit.js';
 
 /**
  * TimeSpan expands on TimeQuantity to provide an class that is similar to .NET's TimeSpan including many useful static methods.

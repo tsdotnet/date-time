@@ -10,7 +10,7 @@ import {
 	TimeStamp,
 	TimeUnit,
 	TimeUnitValue
-} from '../src/date-time';
+} from '../src/date-time.js';
 
 describe('date-time module exports', () => {
 	describe('named exports', () => {

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import TimeStamp from '../src/TimeStamp';
+import TimeStamp from '../src/TimeStamp.js';
 
 describe('TimeStamp', () => {
 	describe('constructor', () => {

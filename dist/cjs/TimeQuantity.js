@@ -8,7 +8,7 @@ const tslib_1 = require("tslib");
 const compare_1 = require("@tsdotnet/compare");
 const exceptions_1 = require("@tsdotnet/exceptions");
 const lazy_1 = require("@tsdotnet/lazy");
-const TimeUnit_1 = tslib_1.__importDefault(require("./TimeUnit"));
+const TimeUnit_js_1 = tslib_1.__importDefault(require("./TimeUnit.js"));
 class TimeQuantity {
     constructor(_quantity = 0) {
         this._quantity = _quantity;
@@ -56,7 +56,7 @@ class TimeQuantity {
         return (0, compare_1.compare)(this.getTotalMilliseconds(), other && other.total && other.total.milliseconds);
     }
     getTotal(units) {
-        return TimeUnit_1.default.fromMilliseconds(this.getTotalMilliseconds(), units);
+        return TimeUnit_js_1.default.fromMilliseconds(this.getTotalMilliseconds(), units);
     }
 }
 exports.default = TimeQuantity;

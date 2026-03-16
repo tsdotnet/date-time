@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import TimeSpan from '../src/TimeSpan';
-import TimeUnit from '../src/TimeUnit';
-import ClockTime from '../src/ClockTime';
-import TimeQuantity from '../src/TimeQuantity';
+import TimeSpan from '../src/TimeSpan.js';
+import TimeUnit from '../src/TimeUnit.js';
+import ClockTime from '../src/ClockTime.js';
+import TimeQuantity from '../src/TimeQuantity.js';
 
 describe('TimeSpan', () => {
 	describe('constructor and basic properties', () => {

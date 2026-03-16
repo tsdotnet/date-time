@@ -3,8 +3,8 @@
  * @license MIT
  */
 
-import CalendarDate from './CalendarDate';
-import ClockTimeValue from './ClockTimeValue';
+import CalendarDate from './CalendarDate.js';
+import ClockTimeValue from './ClockTimeValue.js';
 
 export default interface TimeStampValue
 	extends CalendarDate, Partial<ClockTimeValue>

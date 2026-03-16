@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { Month, DayOfWeek } from '../../src/Calendars/Gregorian';
+import { Month, DayOfWeek } from '../../src/Calendars/Gregorian.js';
 
 describe('Gregorian Calendar', () => {
 	describe('Month enum', () => {

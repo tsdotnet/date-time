@@ -3,10 +3,10 @@
  * Originally based upon .NET source but with many additions and improvements.
  * @license MIT
  */
-import ClockTime from './ClockTime';
-import TimeMeasurement from './TimeMeasurement';
-import TimeQuantity from './TimeQuantity';
-import TimeUnit from './TimeUnit';
+import ClockTime from './ClockTime.js';
+import TimeMeasurement from './TimeMeasurement.js';
+import TimeQuantity from './TimeQuantity.js';
+import TimeUnit from './TimeUnit.js';
 export declare class TimeSpan extends TimeQuantity implements TimeMeasurement {
     readonly ticks: number;
     readonly milliseconds: number;

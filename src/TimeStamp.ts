@@ -4,10 +4,10 @@
  */
 
 import type from '@tsdotnet/type';
-import * as Gregorian from './Calendars/Gregorian';
-import {ticks} from './howManyConstEnums';
-import JsDateConvertible from './JsDateConvertible';
-import TimeStampValue from './TimeStampValue';
+import * as Gregorian from './Calendars/Gregorian.js';
+import {ticks} from './howManyConstEnums.js';
+import JsDateConvertible from './JsDateConvertible.js';
+import TimeStampValue from './TimeStampValue.js';
 
 /**
  * An alternative to Date or DateTime.  Is a model representing the exact date and time.

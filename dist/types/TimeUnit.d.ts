@@ -3,7 +3,7 @@
  * Originally based upon .NET source but with many additions and improvements.
  * @license MIT
  */
-import TimeQuantity from './TimeQuantity';
+import TimeQuantity from './TimeQuantity.js';
 export declare namespace TimeUnit {
     enum UnitType {
         Ticks = 0,

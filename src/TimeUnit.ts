@@ -4,8 +4,8 @@
  * @license MIT
  */
 
-import {hours, milliseconds, minutes, seconds, ticks} from './howManyConstEnums';
-import TimeQuantity from './TimeQuantity';
+import {hours, milliseconds, minutes, seconds, ticks} from './howManyConstEnums.js';
+import TimeQuantity from './TimeQuantity.js';
 
 
 /* eslint-disable no-fallthrough */
