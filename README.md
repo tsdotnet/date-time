@@ -1,4 +1,4 @@
-<a href="https://tsdotnet.github.io/date-time/"><img src="https://cdn.jsdelivr.net/gh/tsdotnet/date-time@master/assets/banner.svg" alt="@tsdotnet/date-time: Time you can add up. DateTime and TimeSpan, as in .NET."></a>
+<a name="banner"><img src="https://cdn.jsdelivr.net/gh/tsdotnet/date-time@master/assets/banner.svg" alt="@tsdotnet/date-time: Time you can add up. DateTime and TimeSpan, as in .NET."></a>
 
 [![npm version](https://img.shields.io/npm/v/@tsdotnet/date-time.svg?style=flat-square)](https://www.npmjs.com/package/@tsdotnet/date-time)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/tsdotnet/date-time/blob/master/LICENSE)
