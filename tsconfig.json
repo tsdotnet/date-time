@@ -11,7 +11,7 @@
     "esModuleInterop": true,
     "removeComments": true,
     "importHelpers": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "preserveConstEnums": true
     // No outDir, module, declaration, etc.
   },
