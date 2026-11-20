@@ -4,6 +4,11 @@
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.tsdotnet = global.tsdotnet || {}, global.tsdotnet.dateTime = global.tsdotnet.dateTime || {}), global.tsdotnet.compare, global.tsdotnet.exceptions, global.tsdotnet.lazy, global.tsdotnet.type));
 })(this, (function (exports, compare, exceptions, Lazy, type) { 'use strict';
 
+    function _interopDefault (e) { return e && e.__esModule ? e : { default: e }; }
+
+    var Lazy__default = /*#__PURE__*/_interopDefault(Lazy);
+    var type__default = /*#__PURE__*/_interopDefault(type);
+
     /*!
      * @author electricessence / https://github.com/electricessence/
      * @license MIT
@@ -253,7 +258,7 @@
             this.minutes = ms / 60000;
             this.hours = ms / 3600000;
             this.days = ms / 86400000;
-            this._time = Lazy.create(() => new ClockTime(this.getTotalMilliseconds()));
+            this._time = Lazy__default.default.create(() => new ClockTime(this.getTotalMilliseconds()));
             Object.freeze(this);
         }
         static get zero() {
@@ -298,7 +303,7 @@
         add(other) {
             if (!other)
                 return this;
-            if (type.isNumber(other))
+            if (type__default.default.isNumber(other))
                 throw new Error('Use .addUnit(value:number, units:TimeUnit) to add a numerical value amount.  Default units are milliseconds.\n' +
                     '.add only supports quantifiable time values (TimeQuantity).');
             const otherMs = other instanceof TimeQuantity
@@ -339,7 +344,7 @@
             Object.freeze(this);
         }
         static from(d) {
-            if (!(d instanceof Date) && type.hasMember(d, 'toJsDate'))
+            if (!(d instanceof Date) && type__default.default.hasMember(d, 'toJsDate'))
                 d = d.toJsDate();
             if (d instanceof Date) {
                 return new TimeStamp(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds(), d.getMilliseconds());
