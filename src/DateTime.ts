@@ -8,7 +8,7 @@ import {ArgumentNullException} from '@tsdotnet/exceptions';
 import CalendarDate from './CalendarDate.js';
 import * as Gregorian from './Calendars/Gregorian.js';
 import ClockTime from './ClockTime.js';
-import DateTimeKind from './DateTimeKind.js';
+import DateTimeKind, { DateTimeKindValue, type DateTimeKindOrValue } from './DateTimeKind.js';
 import {milliseconds} from './howManyConstEnums.js';
 import type JsDateConvertible from './JsDateConvertible.js';
 import TimeQuantity from './TimeQuantity.js';
@@ -26,17 +26,17 @@ implements CalendarDate, JsDateConvertible
 
 	constructor ();
 
-	constructor (dateString: string, kind?: DateTimeKind);
+	constructor (dateString: string, kind?: DateTimeKindOrValue);
 
-	constructor (milliseconds: number, kind?: DateTimeKind);
+	constructor (milliseconds: number, kind?: DateTimeKindOrValue);
 
-	constructor (source: Date, kind?: DateTimeKind);
+	constructor (source: Date, kind?: DateTimeKindOrValue);
 
-	constructor (source: DateTime, kind?: DateTimeKind);
+	constructor (source: DateTime, kind?: DateTimeKindOrValue);
 
-	constructor (value: any = new Date(), kind: DateTimeKind = DateTimeKind.Local)
+	constructor (value: any = new Date(), kind: DateTimeKindOrValue = DateTimeKindValue.Local)
 	{
-		this._kind = kind;
+		this._kind = kind as number as DateTimeKind;
 		if(value instanceof DateTime)
 		{
 			this._value = value.toJsDate();
@@ -364,7 +364,7 @@ implements CalendarDate, JsDateConvertible
 	toUniversalTime (): DateTime
 	{
 		const _ = this;
-		if(_._kind!=DateTimeKind.Local)
+		if((_._kind as number)!=DateTimeKindValue.Local)
 			return new DateTime(_, _._kind);
 
 		const d = _._value;
@@ -378,7 +378,7 @@ implements CalendarDate, JsDateConvertible
 				d.getUTCSeconds(),
 				d.getUTCMilliseconds()
 			),
-			DateTimeKind.Utc
+			DateTimeKindValue.Utc
 		);
 	}
 

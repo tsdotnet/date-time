@@ -6,7 +6,7 @@
 import CalendarDate from './CalendarDate.js';
 import * as Gregorian from './Calendars/Gregorian.js';
 import ClockTime from './ClockTime.js';
-import DateTimeKind from './DateTimeKind.js';
+import DateTimeKind, { type DateTimeKindOrValue } from './DateTimeKind.js';
 import type JsDateConvertible from './JsDateConvertible.js';
 import TimeQuantity from './TimeQuantity.js';
 import TimeSpan from './TimeSpan.js';
@@ -16,10 +16,10 @@ export default class DateTime implements CalendarDate, JsDateConvertible {
     private readonly _kind;
     private _time;
     constructor();
-    constructor(dateString: string, kind?: DateTimeKind);
-    constructor(milliseconds: number, kind?: DateTimeKind);
-    constructor(source: Date, kind?: DateTimeKind);
-    constructor(source: DateTime, kind?: DateTimeKind);
+    constructor(dateString: string, kind?: DateTimeKindOrValue);
+    constructor(milliseconds: number, kind?: DateTimeKindOrValue);
+    constructor(source: Date, kind?: DateTimeKindOrValue);
+    constructor(source: DateTime, kind?: DateTimeKindOrValue);
     static get now(): DateTime;
     static get today(): DateTime;
     static get tomorrow(): DateTime;

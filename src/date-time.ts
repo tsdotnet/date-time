@@ -8,7 +8,7 @@ import type CalendarDate from './CalendarDate.js';
 import ClockTime from './ClockTime.js';
 import type ClockTimeValue from './ClockTimeValue.js';
 import DateTime from './DateTime.js';
-import DateTimeKind from './DateTimeKind.js';
+import DateTimeKind, { type DateTimeKindOrValue } from './DateTimeKind.js';
 import * as howMany from './howMany.js';
 import type TimeMeasurement from './TimeMeasurement.js';
 import TimeQuantity from './TimeQuantity.js';
@@ -36,6 +36,7 @@ export {
 export type {
 	CalendarDate,
 	ClockTimeValue,
+	DateTimeKindOrValue,
 	TimeMeasurement,
 	TimeStampValue,
 	JsDateConvertible
